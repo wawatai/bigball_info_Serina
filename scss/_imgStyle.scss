@@ -1,5 +1,6 @@
 //header
-header .mid {
+header .smallNav::before,
+header .member::before {
     background: url(../img/header_deco.png)no-repeat center;
     background-size: contain;
 }
@@ -67,6 +68,12 @@ background-size: 100%;
     background-size: 100%;
 }
 
+.gameBlock .status .detail .left i.red,
+.gameBlock .status .detail .left i.yellow {
+    background: url(../img/icon/point_state.png) no-repeat center;
+    background-size: 100%;
+}
+
 .sideRight .pic {
     background: url(../img/rightside_pic.png) no-repeat center;
     background-size: contain;
@@ -96,9 +103,9 @@ footer i.about_ic {
 footer nav ul li:hover::before,
 footer nav ul li:active::before,
 footer nav ul li.active::before,
-footer nav ul li:hover::after,
-footer nav ul li:active::after,
-footer nav ul li.active::after {
+footer nav ul li:hover::after ,
+footer nav ul li:active::after ,
+footer nav ul li.active::after  {
     background: url(../img/switchBtn_active.png) no-repeat center;
     background-size: 100%;
 }

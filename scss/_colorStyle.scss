@@ -22,6 +22,24 @@ $shadow02: #00000021;
 $scrollBar_thumb: $main_color;
 $scrollBar_track: #efefef;
 
+@mixin scrollBar {
+    
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scrollBar_thumb;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $scrollBar_track;
+        border-radius: 10px;
+    }
+ 
+}
+
 //header
 $header_font: #172c63;
 $header_drop_bg: #0e459f;

@@ -1,136 +1,132 @@
 .mainwrap {
     width: auto;
+    min-width: 1000px;
     height: 982px;
     display: flex;
     flex-direction: column;
 
     .topArea {
         width: 100%;
-        min-width: 1495px;
+        min-width: 1000px;
         height: 120px;
         background: $tag_Bg;
         display: flex;
         justify-content: left;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 20px ;
         box-sizing: border-box;
-        //box-shadow: 0px 120px 8px $shadow01;
-        overflow-x: scroll;
 
-        &::-webkit-scrollbar {
-            width: 20%;
-            height: 8px;
-        }
+        .outterBox {
+            width: 100%;
+            height: auto;
+            padding: 10px 0;
+            display: flex;
+            overflow-x: overlay;
 
-        &::-webkit-scrollbar-thumb {
-            background: $scrollBar_thumb;
-            border-radius: 10px;
-        }
+            @include scrollBar;
 
-        &::-webkit-scrollbar-track {
-            background: $scrollBar_track;
-            border-radius: 10px;
-        }
-
-        .tag {
-            width: 350px;
-            height: 85px;
-            background: $sub_color;
-            padding: 10px;
-            box-sizing: border-box;
-            box-shadow: 0px 2px 5px $shadow02;
-            margin-right: 20px;
-            border-radius: 8px;
-            position: relative;
-
-            .type {
-                color: $sub_font;
-                font-size: 12px;
-                font-weight: bold;
-                text-align: center;
-            }
-
-            .content {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-                .team {
-                    width: 33%;
-                    height: 100%;
-
-                    p {
-                        color: $main_font;
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
-                }
-
-                .point {
-                    width: 33%;
-                    height: 100%;
-
-                    p {
-                        color: $score;
-                        font-size: 20px;
-                        font-weight: bold;
-                        padding: 5px 0;
-                    }
-
-                    .detail {
-                        margin-top: 0;
-                    }
-                }
-
-                .detail {
+            .tag {
+                width: 350px;
+                height: 85px;
+                background: $sub_color;
+                padding: 10px;
+                box-sizing: border-box;
+                box-shadow: 0px 2px 5px $shadow02;
+                margin-right: 20px;
+                border-radius: 8px;
+                flex-shrink: 0;
+                position: relative;
+    
+                .type {
                     color: $sub_font;
-                    font-size: 13px;
+                    font-size: 12px;
                     font-weight: bold;
-                    margin-top: 15px;
+                    text-align: center;
                 }
-            }
-
-            &:nth-of-type(1){
+    
+                .content {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    .team {
+                        width: 33%;
+                        height: 100%;
+    
+                        p {
+                            color: $main_font;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                    }
+    
+                    .point {
+                        width: 33%;
+                        height: 100%;
+    
+                        p {
+                            color: $score;
+                            font-size: 20px;
+                            font-weight: bold;
+                            padding: 5px 0;
+                        }
+    
+                        .detail {
+                            margin-top: 0;
+                        }
+                    }
+    
+                    .detail {
+                        color: $sub_font;
+                        font-size: 13px;
+                        font-weight: bold;
+                        margin-top: 15px;
+                    }
+                }
+    
+                &:nth-of-type(1){
+                    &::before {
+                        background: $tag_orange;
+                    }
+                }
+                &:nth-of-type(2){
+                    &::before {
+                        background: $tag_blue;
+                    }
+                }
+                &:nth-of-type(3){
+                    &::before {
+                        background: $tag_green;
+                    }
+                }
+                &:nth-of-type(4){
+                    &::before {
+                        background: $tag_red;
+                    }
+                }
+    
                 &::before {
-                    background: $tag_orange;
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+                    border-radius: 8px 0 0 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
-            }
-            &:nth-of-type(2){
-                &::before {
-                    background: $tag_blue;
-                }
-            }
-            &:nth-of-type(3){
-                &::before {
-                    background: $tag_green;
-                }
-            }
-            &:nth-of-type(4){
-                &::before {
-                    background: $tag_red;
-                }
-            }
-
-            &::before {
-                content: "";
-                width: 5px;
-                height: 100%;
-                border-radius: 8px 0 0 8px;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
+
+        
     }
 
     .downArea {
         width: auto;
-        height: 860px;
+        height: auto;
         display: flex;
-        
+        position: relative;
 
         //左側按鈕
         .sideLeft {
@@ -334,16 +330,26 @@
                             }
                         }
                     }
-                    
+
+                    .arrow {
+                        width: 17px;
+                        height: 13px;
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        cursor: pointer;
+                    }
+                                 
                     .content {
                         display: flex;
                         width: 100%;
                         height: auto;
                         padding: 0 0 15px 40px;
                         box-sizing: border-box;
+                        position: relative;
 
                         .fixed_item {
-                            width: 400px;
+                            width: 334px;
                             height: 100%;
                             position: relative;
 
@@ -438,6 +444,8 @@
 
                                     &:last-child {
                                         width: 75%;
+                                        padding: 0 0 0 10px;
+                                        box-sizing: border-box;
 
                                         p {
                                             color: $main_font;
@@ -524,7 +532,7 @@
                                     width: 100%;
                                     height: 48px;
                                     display: grid;
-                                    grid-template-columns: repeat(2,25%);
+                                    grid-template-columns: repeat(2,40%);
                                     gap: 2px;
                                     justify-content: center;
                                     color: $main_font;
@@ -538,6 +546,8 @@
                         .status {
                             width: 118px;
                             height: 100%;
+                            //padding: 0 20px 0 0;
+                            box-sizing: border-box;
 
                             .itemName {
                                 height: 50px;
@@ -546,6 +556,50 @@
                                 align-items: center;
                                 color: $deco_color;
                                 font-weight: bold;
+                            }
+
+                            .detail {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $main_font;
+                                font-size: 11px;
+                                font-weight: bolder;
+
+                                .left {
+                                    width: 20%;
+
+                                    ul {
+                                        width: 100%;
+
+                                        li {
+                                            display: flex;
+
+                                            i {
+                                                width: 7px;
+                                                height: 11px;
+                                                margin-right: 3px;
+
+                                                &.red {
+                                                    background-position-y: 0%;
+                                                }
+
+                                                &.yellow {
+                                                    background-position-y: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .right {
+                                    width: 80%;
+                                    p {
+                                        text-align: end;
+                                    }
+                                }
                             }
                         }
                         
@@ -557,7 +611,10 @@
                             color: $lightgray_font;
                             font-weight: bold;
                         }
-                     
+
+                        &:not(:first-child) {
+                            border-bottom: 1px solid $data_border;
+                        }
                     }
 
                     &::before {
@@ -571,16 +628,6 @@
                         right: -5px;
                         cursor: pointer;
                     }
-
-                    .arrow {
-                        width: 17px;
-                        height: 13px;
-                        position: absolute;
-                        top: 16px;
-                        right: 16px;
-                        cursor: pointer;
-                    }
-
                     &.active {
                         height: 44px;
 
@@ -595,13 +642,15 @@
 
         //右側
         .sideRight {
-            width: 205px;
-            height: auto;
+            width: auto;
+            height: 100%;
             display: flex;
             justify-content: center;
             background: $sub_color;
             padding: 10px;
-            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: 0;
             z-index: 2;
             cursor: pointer;
 

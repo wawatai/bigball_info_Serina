@@ -1,5 +1,6 @@
 @charset "UTF-8";
-header .mid {
+header .smallNav::before,
+header .member::before {
   background: url(../img/header_deco.png) no-repeat center;
   background-size: contain;
 }
@@ -72,6 +73,12 @@ header .user .ac_ic {
   background-size: 100%;
 }
 
+.gameBlock .status .detail .left i.red,
+.gameBlock .status .detail .left i.yellow {
+  background: url(../img/icon/point_state.png) no-repeat center;
+  background-size: 100%;
+}
+
 .sideRight .pic {
   background: url(../img/rightside_pic.png) no-repeat center;
   background-size: contain;
@@ -133,6 +140,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font: inherit;
   vertical-align: baseline;
 }
@@ -203,14 +212,16 @@ html body {
 }
 html header {
   width: auto;
+  min-width: 1000px;
   height: 97px;
   background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 html header .smallNav {
-  width: 252px;
+  width: auto;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,9 +232,8 @@ html header .smallNav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding: 0 100px 0 20px;
+  position: relative;
 }
 html header .smallNav li {
   width: 58px;
@@ -258,13 +268,24 @@ html header .smallNav li p {
 html header .smallNav li:last-child {
   margin-right: 0;
 }
+html header .smallNav::before {
+  content: "";
+  width: 141px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 html header .mid {
-  min-width: 1310px;
-  height: 103px;
+  width: 100%;
+  min-width: auto;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #2b6de7;
   margin: 0 auto;
+  position: relative;
 }
 html header .mid .logo {
   width: 85px;
@@ -272,8 +293,8 @@ html header .mid .logo {
   margin: auto;
 }
 html header .member {
-  width: 323px;
-  height: 100px;
+  width: auto;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,10 +308,22 @@ html header .member {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 10px 0 130px;
+  position: relative;
+}
+html header .member::before {
+  content: "";
+  width: 141px;
+  height: 97px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: -1px;
 }
 html header .member .main {
-  width: 295px;
-  height: 50px;
+  width: auto;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,48 +386,36 @@ html header .member .main .user .ac_ic {
   margin-right: 20px;
 }
 html header .member .main .user p {
-  width: 100%;
+  width: auto;
   color: #172c63;
   font-size: 18px;
   font-weight: bold;
-  position: relative;
+  margin-right: 10px;
 }
-html header .member .main .user p::before {
-  content: "";
+html header .member .main .user .arrow {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 6px 4px 0 4px;
   border-color: #fa803f transparent transparent transparent;
-  position: absolute;
-  top: 8px;
-  left: 55px;
 }
-html header .member .main .user ul {
+html header .member .dropList {
   display: none;
-  width: 140px;
-  height: 140px;
+  width: auto;
+  height: auto;
   background: #0e459f;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: absolute;
-  bottom: -130px;
-  left: 0;
+  top: 55px;
+  right: 20px;
   z-index: 20;
 }
-html header .member .main .user ul.display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+html header .member .dropList.display {
+  display: block;
 }
-html header .member .main .user ul li {
-  width: 100%;
-  height: 17%;
+html header .member .dropList li {
+  width: auto;
+  min-width: 140px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,21 +423,22 @@ html header .member .main .user ul li {
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
-  padding: 0 10px;
+  padding: 5px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
-html header .member .main .user ul li i {
+html header .member .dropList li i {
   width: 15px;
   height: 15px;
   margin-right: 6px;
 }
-html header .member .main .user ul li:hover, html header .member .main .user ul li:active, html header .member .main .user ul li.active {
+html header .member .dropList li:hover, html header .member .dropList li:active, html header .member .dropList li.active {
   background: #2b6de7;
 }
 html header .member .other {
   width: 100%;
-  height: 20%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,30 +448,31 @@ html header .member .other {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 15px 5px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+}
+html header .member .other div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 html header .member .other div P {
   color: #172c63;
   font-size: 14px;
   font-weight: bold;
-  position: relative;
+  margin-right: 10px;
   cursor: pointer;
 }
-html header .member .other div P i {
+html header .member .other div > i {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 6px 4px 0 4px;
   border-color: #fa803f transparent transparent transparent;
-  position: absolute;
-  top: 4px;
-  left: 34px;
 }
-html header .member .other div.cs i {
-  position: absolute;
-  top: 4px;
-  left: 60px;
+html header .member .other div.cs {
+  margin-right: 10px;
 }
 html header .member .other .lang {
   width: 16px;
@@ -457,50 +480,6 @@ html header .member .other .lang {
   background-position-y: 100%;
   position: relative;
   cursor: pointer;
-}
-html header .member .other .lang ul {
-  display: none;
-  width: 127px;
-  height: 150px;
-  background: #0e459f;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  bottom: -157px;
-  left: -108px;
-  z-index: 10;
-}
-html header .member .other .lang ul.display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-html header .member .other .lang ul li {
-  width: 100%;
-  height: 17%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #ffffff;
-  padding: 0 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-html header .member .other .lang ul li i {
-  width: 15px;
-  height: 15px;
-  margin-right: 6px;
-}
-html header .member .other .lang ul li:hover, html header .member .other .lang ul li:active, html header .member .other .lang ul li.active {
-  background: #2b6de7;
 }
 html header .member p {
   color: #172c63;
@@ -512,8 +491,52 @@ html header .member p a {
   font-weight: bold;
   text-decoration: none;
 }
+html header .langDrop {
+  display: none;
+  width: auto;
+  height: auto;
+  background: #0e459f;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 97px;
+  right: 20px;
+  z-index: 10;
+}
+html header .langDrop.display {
+  display: block;
+}
+html header .langDrop li {
+  width: 100%;
+  height: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  padding: 3px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+html header .langDrop li i {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+html header .langDrop li:hover, html header .langDrop li:active, html header .langDrop li.active {
+  background: #2b6de7;
+}
 html .mainwrap {
   width: auto;
+  min-width: 1000px;
   height: 982px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,7 +548,7 @@ html .mainwrap {
 }
 html .mainwrap .topArea {
   width: 100%;
-  min-width: 1495px;
+  min-width: 1000px;
   height: 120px;
   background: #e6ecf8;
   display: -webkit-box;
@@ -540,21 +563,28 @@ html .mainwrap .topArea {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: scroll;
 }
-html .mainwrap .topArea::-webkit-scrollbar {
-  width: 20%;
-  height: 8px;
+html .mainwrap .topArea .outterBox {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: overlay;
 }
-html .mainwrap .topArea::-webkit-scrollbar-thumb {
+html .mainwrap .topArea .outterBox::-webkit-scrollbar {
+  height: 5px;
+}
+html .mainwrap .topArea .outterBox::-webkit-scrollbar-thumb {
   background: #2b6de7;
   border-radius: 10px;
 }
-html .mainwrap .topArea::-webkit-scrollbar-track {
+html .mainwrap .topArea .outterBox::-webkit-scrollbar-track {
   background: #efefef;
   border-radius: 10px;
 }
-html .mainwrap .topArea .tag {
+html .mainwrap .topArea .outterBox .tag {
   width: 350px;
   height: 85px;
   background: #ffffff;
@@ -565,17 +595,19 @@ html .mainwrap .topArea .tag {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
   margin-right: 20px;
   border-radius: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
 }
-html .mainwrap .topArea .tag .type {
+html .mainwrap .topArea .outterBox .tag .type {
   color: #7d8697;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-html .mainwrap .topArea .tag .content {
+html .mainwrap .topArea .outterBox .tag .content {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,49 +617,48 @@ html .mainwrap .topArea .tag .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
-html .mainwrap .topArea .tag .content .team {
+html .mainwrap .topArea .outterBox .tag .content .team {
   width: 33%;
   height: 100%;
 }
-html .mainwrap .topArea .tag .content .team p {
+html .mainwrap .topArea .outterBox .tag .content .team p {
   color: #172c63;
   font-size: 14px;
   font-weight: bold;
 }
-html .mainwrap .topArea .tag .content .point {
+html .mainwrap .topArea .outterBox .tag .content .point {
   width: 33%;
   height: 100%;
 }
-html .mainwrap .topArea .tag .content .point p {
+html .mainwrap .topArea .outterBox .tag .content .point p {
   color: #dd5664;
   font-size: 20px;
   font-weight: bold;
   padding: 5px 0;
 }
-html .mainwrap .topArea .tag .content .point .detail {
+html .mainwrap .topArea .outterBox .tag .content .point .detail {
   margin-top: 0;
 }
-html .mainwrap .topArea .tag .content .detail {
+html .mainwrap .topArea .outterBox .tag .content .detail {
   color: #7d8697;
   font-size: 13px;
   font-weight: bold;
   margin-top: 15px;
 }
-html .mainwrap .topArea .tag:nth-of-type(1)::before {
+html .mainwrap .topArea .outterBox .tag:nth-of-type(1)::before {
   background: #ff8451;
 }
-html .mainwrap .topArea .tag:nth-of-type(2)::before {
+html .mainwrap .topArea .outterBox .tag:nth-of-type(2)::before {
   background: #2b6de7;
 }
-html .mainwrap .topArea .tag:nth-of-type(3)::before {
+html .mainwrap .topArea .outterBox .tag:nth-of-type(3)::before {
   background: #10ba3f;
 }
-html .mainwrap .topArea .tag:nth-of-type(4)::before {
+html .mainwrap .topArea .outterBox .tag:nth-of-type(4)::before {
   background: #de5974;
 }
-html .mainwrap .topArea .tag::before {
+html .mainwrap .topArea .outterBox .tag::before {
   content: "";
   width: 5px;
   height: 100%;
@@ -638,10 +669,11 @@ html .mainwrap .topArea .tag::before {
 }
 html .mainwrap .downArea {
   width: auto;
-  height: 860px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 html .mainwrap .downArea .sideLeft {
   width: 80px;
@@ -872,6 +904,14 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title div .decoPic {
   top: -5px;
   right: -10px;
 }
+html .mainwrap .downArea .middle .dataBox .gameBlock .arrow {
+  width: 17px;
+  height: 13px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
 html .mainwrap .downArea .middle .dataBox .gameBlock .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -881,9 +921,10 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content {
   padding: 0 0 15px 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item {
-  width: 400px;
+  width: 334px;
   height: 100%;
   position: relative;
 }
@@ -982,6 +1023,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child {
   width: 75%;
+  padding: 0 0 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p {
   color: #172c63;
@@ -1073,8 +1117,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .data
   height: 48px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 2px 25%;
-  grid-template-columns: repeat(2, 25%);
+  -ms-grid-columns: 40% 2px 40%;
+  grid-template-columns: repeat(2, 40%);
   gap: 2px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1087,6 +1131,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .data
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status {
   width: 118px;
   height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .itemName {
   height: 50px;
@@ -1102,6 +1148,50 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .itemName 
   color: #fa803f;
   font-weight: bold;
 }
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #172c63;
+  font-size: 11px;
+  font-weight: bolder;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left {
+  width: 20%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left ul {
+  width: 100%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left ul li i {
+  width: 7px;
+  height: 11px;
+  margin-right: 3px;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left ul li i.red {
+  background-position-y: 0%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .left ul li i.yellow {
+  background-position-y: 100%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .right {
+  width: 80%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail .right p {
+  text-align: end;
+}
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
   height: 50px;
   display: -webkit-box;
@@ -1116,6 +1206,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
   color: #a4aab6;
   font-weight: bold;
 }
+html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) {
+  border-bottom: 1px solid #e5e9ec;
+}
 html .mainwrap .downArea .middle .dataBox .gameBlock::before {
   content: "";
   width: 80%;
@@ -1125,14 +1218,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock::before {
   position: absolute;
   top: -3px;
   right: -5px;
-  cursor: pointer;
-}
-html .mainwrap .downArea .middle .dataBox .gameBlock .arrow {
-  width: 17px;
-  height: 13px;
-  position: absolute;
-  top: 16px;
-  right: 16px;
   cursor: pointer;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock.active {
@@ -1145,8 +1230,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
   transition: 0.3s;
 }
 html .mainwrap .downArea .sideRight {
-  width: 205px;
-  height: auto;
+  width: auto;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1155,8 +1240,9 @@ html .mainwrap .downArea .sideRight {
           justify-content: center;
   background: #ffffff;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
   z-index: 2;
   cursor: pointer;
 }

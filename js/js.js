@@ -1,12 +1,12 @@
 $(function(){
     //會員資料
     $("header .member .user").click(function(){
-        $("header .member .user ul").toggleClass("display");
+        $("header .member .dropList").toggleClass("display");
     })
 
     //語系
     $("header .other .lang").click(function(){
-        $("header .other .lang ul").toggleClass("display");
+        $("header .langDrop").toggleClass("display");
     })
 
     //全部收起
