@@ -1,0 +1,104 @@
+//header
+header .mid {
+    background: url(../img/header_deco.png)no-repeat center;
+    background-size: contain;
+}
+header .smallNav i {
+    background: url(../img/icon/navList.png)no-repeat center;
+    background-size: 300%;
+}
+
+header .moneyDate i,
+header .other .lang{
+    background: url(../img/icon/moneyData.png) no-repeat center;
+    background-size: 100%;
+}
+
+header .user .ac_ic {
+    background: url(../img/icon/user.png) no-repeat center;
+    background-size: 100%;
+}
+
+//sideLeft 左側按鈕
+.sideLeft li .basketball{
+    background: url(../img/icon/sideLeft01_btn.png) no-repeat center;
+    background-size: 200%;
+}
+.sideLeft li .socer {
+    background: url(../img/icon/sideLeft02_btn.png) no-repeat center;
+    background-size: 200%;
+}
+.sideLeft li .baseball{
+    background: url(../img/icon/sideLeft03_btn.png) no-repeat center;
+    background-size: 200%;
+}
+.sideLeft li .hockey{
+    background: url(../img/icon/sideLeft04_btn.png) no-repeat center;
+    background-size: 200%;
+}
+.sideLeft li .ball{
+    background: url(../img/icon/sideLeft05_btn.png) no-repeat center;
+    background-size: 200%;
+}
+.funtionArea .collapse_ic {
+    background: url(../img/icon/collapase_ic.png) no-repeat center;
+    background-size: 100%;
+}
+
+.switchBtn div:hover::before,
+.switchBtn div:active::before,
+.switchBtn div.active::before {
+background: url(../img/switchBtn_active.png) no-repeat center;
+background-size: 100%;
+}
+
+.gameBlock .state .anal_ic {
+    background: url(../img/icon/anal_ic.png) no-repeat;
+    background-size: 100%;
+}
+
+.gameBlock .title .decoPic{
+    background: url(../img/gameBlock_deco.png) no-repeat center;
+    background-size: 100%;
+}
+
+.gameBlock .arrow {
+    background: url(../img/icon/arrow_ic.png) no-repeat center;
+    background-size: 100%;
+}
+
+.sideRight .pic {
+    background: url(../img/rightside_pic.png) no-repeat center;
+    background-size: contain;
+}
+
+//footer
+footer i.help_ic {
+    background: url(../img/icon/fnav01.png) no-repeat;
+    background-size: 100%;
+}
+footer i.feedBack_ic {
+    background: url(../img/icon/fnav02.png) no-repeat;
+    background-size: 100%;
+}
+footer i.promote_ic {
+    background: url(../img/icon/fnav03.png) no-repeat;
+    background-size: 100%;
+}
+footer i.policy_ic {
+    background: url(../img/icon/fnav04.png) no-repeat;
+    background-size: 100%;
+}
+footer i.about_ic {
+    background: url(../img/icon/fnav05.png) no-repeat;
+    background-size: 100%;
+}
+footer nav ul li:hover::before,
+footer nav ul li:active::before,
+footer nav ul li.active::before,
+footer nav ul li:hover::after,
+footer nav ul li:active::after,
+footer nav ul li.active::after {
+    background: url(../img/switchBtn_active.png) no-repeat center;
+    background-size: 100%;
+}
