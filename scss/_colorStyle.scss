@@ -15,7 +15,7 @@ $header_border: #ecedef;
 $data_border: #e5e9ec;
 
 //陰影
-$shadow01: #00000091;
+$shadow01: #0000004d;
 $shadow02: #00000021;
 
 //scrollbar
@@ -25,6 +25,7 @@ $scrollBar_track: #efefef;
 @mixin scrollBar {
     
     &::-webkit-scrollbar {
+        width: 5px;
         height: 5px;
     }
 
@@ -37,7 +38,6 @@ $scrollBar_track: #efefef;
         background: $scrollBar_track;
         border-radius: 10px;
     }
- 
 }
 
 //header

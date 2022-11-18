@@ -63,8 +63,8 @@ header .user .ac_ic {
   background-size: 100%;
 }
 
-.gameBlock .title .decoPic {
-  background: url(../img/gameBlock_deco.png) no-repeat center;
+.gameBlock .title p::before {
+  background: url(../img/header_deco.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -116,6 +116,11 @@ footer nav ul li:hover::after,
 footer nav ul li:active::after,
 footer nav ul li.active::after {
   background: url(../img/switchBtn_active.png) no-repeat center;
+  background-size: 100%;
+}
+
+aside.chatroom .titleArea .member_ic {
+  background: url(../img/icon/online_ic.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -203,7 +208,7 @@ html, body {
 
 html {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 html body {
   width: auto;
@@ -535,9 +540,10 @@ html header .langDrop li:hover, html header .langDrop li:active, html header .la
   background: #2b6de7;
 }
 html .mainwrap {
-  width: auto;
+  width: 100%;
   min-width: 1000px;
-  height: 982px;
+  height: 735px;
+  background: #dddddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,6 +551,7 @@ html .mainwrap {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 html .mainwrap .topArea {
   width: 100%;
@@ -554,6 +561,8 @@ html .mainwrap .topArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -574,6 +583,7 @@ html .mainwrap .topArea .outterBox {
   overflow-x: overlay;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar {
+  width: 5px;
   height: 5px;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar-thumb {
@@ -668,84 +678,15 @@ html .mainwrap .topArea .outterBox .tag::before {
   left: 0;
 }
 html .mainwrap .downArea {
-  width: auto;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 195px 0 80px;
   position: relative;
-}
-html .mainwrap .downArea .sideLeft {
-  width: 80px;
-  height: auto;
-  background: #0e459f;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  z-index: 2;
-}
-html .mainwrap .downArea .sideLeft li {
-  width: 50px;
-  height: 53px;
-  background: transparent;
-  border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-html .mainwrap .downArea .sideLeft li:hover, html .mainwrap .downArea .sideLeft li:active, html .mainwrap .downArea .sideLeft li.active {
-  background: #ffffff;
-  border-radius: 80px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-html .mainwrap .downArea .sideLeft li:hover i, html .mainwrap .downArea .sideLeft li:active i, html .mainwrap .downArea .sideLeft li.active i {
-  background-position-x: 100%;
-}
-html .mainwrap .downArea .sideLeft li .basketball {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
-}
-html .mainwrap .downArea .sideLeft li .socer {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
-}
-html .mainwrap .downArea .sideLeft li .baseball {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
-}
-html .mainwrap .downArea .sideLeft li .hockey {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
-}
-html .mainwrap .downArea .sideLeft li .ball {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
+  overflow: hidden;
 }
 html .mainwrap .downArea .middle {
-  width: auto;
-  height: auto;
-  background: #dddddd;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,20 +694,21 @@ html .mainwrap .downArea .middle {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-right: 5px;
   position: relative;
 }
 html .mainwrap .downArea .middle .funtionArea {
   width: 100%;
-  height: 61px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 12px 7px 12px 12px;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn {
   width: 301px;
@@ -853,10 +795,21 @@ html .mainwrap .downArea .middle .funtionArea .collapse p {
 }
 html .mainwrap .downArea .middle .dataBox {
   width: 100%;
-  height: auto;
-  padding: 0 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  height: 100%;
+  padding: 12px 7px 20px 12px;
+  overflow-y: overlay;
+}
+html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-thumb {
+  background: #2b6de7;
+  border-radius: 10px;
+}
+html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock {
   width: 100%;
@@ -878,31 +831,43 @@ html .mainwrap .downArea .middle .dataBox .gameBlock {
   overflow: hidden;
   position: relative;
 }
+html .mainwrap .downArea .middle .dataBox .gameBlock:last-child {
+  margin: 0;
+}
 html .mainwrap .downArea .middle .dataBox .gameBlock .title {
   width: 100%;
   height: 47px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #2b6de7;
   color: #7b829f;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .title p {
-  width: 15%;
-  margin: 11px 0 0 40px;
-}
-html .mainwrap .downArea .middle .dataBox .gameBlock .title div {
-  width: 1330px;
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  padding: 11px 60px 6px 40px;
   position: relative;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .title div .decoPic {
-  width: 100%;
-  height: 57px;
+html .mainwrap .downArea .middle .dataBox .gameBlock .title p::before {
+  content: "";
+  width: 81px;
+  height: 47px;
   position: absolute;
-  top: -5px;
-  right: -10px;
+  top: 0;
+  right: -8px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .arrow {
   width: 17px;
@@ -924,8 +889,10 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content {
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item {
-  width: 334px;
+  width: 247px;
   height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state {
@@ -1038,8 +1005,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .score {
   width: 118px;
   height: 100%;
   padding: 50px 0 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .score p {
@@ -1061,28 +1028,35 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .score::before {
   bottom: -9px;
   right: 0;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList {
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
+  padding: 0 0 10px;
+  overflow: overlay;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList::-webkit-scrollbar-thumb {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-thumb {
   background: #2b6de7;
   border-radius: 10px;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList::-webkit-scrollbar-track {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-track {
   background: #efefef;
   border-radius: 10px;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li {
-  width: 18%;
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li {
+  width: 16.6666666667%;
+  min-width: 120px;
   height: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1091,6 +1065,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1098,7 +1074,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li {
       -ms-flex-align: center;
           align-items: center;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .teamName {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li .teamName {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1112,7 +1088,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .team
   color: #fa803f;
   font-weight: bold;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .data {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li .data {
   width: 100%;
   height: 48px;
   display: -ms-grid;
@@ -1131,6 +1107,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .teamList li .data
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status {
   width: 118px;
   height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1160,6 +1138,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
   color: #172c63;
   font-size: 11px;
   font-weight: bolder;
@@ -1209,19 +1188,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
 html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) {
   border-bottom: 1px solid #e5e9ec;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock::before {
-  content: "";
-  width: 80%;
-  min-width: 1330px;
-  height: 57px;
-  border-radius: 0 10px 0 40px;
-  position: absolute;
-  top: -3px;
-  right: -5px;
-  cursor: pointer;
-}
 html .mainwrap .downArea .middle .dataBox .gameBlock.active {
-  height: 44px;
+  height: 47px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
   -webkit-transform: rotate(180deg);
@@ -1229,39 +1197,14 @@ html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-html .mainwrap .downArea .sideRight {
-  width: auto;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #ffffff;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-}
-html .mainwrap .downArea .sideRight .pic {
-  width: 175px;
-  height: 173px;
-}
 html footer {
   width: 100%;
-  height: 114px;
+  height: auto;
   background: #f1f8ff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
 }
 html footer nav ul {
   width: 100%;
-  height: 50%;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1329,7 +1272,7 @@ html footer nav ul li:hover::after, html footer nav ul li:active::after, html fo
 }
 html footer .copyright {
   width: 100%;
-  height: 50%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1343,4 +1286,220 @@ html footer .copyright {
 }
 html footer .copyright p {
   color: #ffffff;
+}
+html aside.sideLeft {
+  width: 80px;
+  height: calc(100% - 217px);
+  background: #0e459f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 217px;
+  left: 0;
+  z-index: 50;
+}
+html aside.sideLeft ul li {
+  width: 50px;
+  height: 53px;
+  background: transparent;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+html aside.sideLeft ul li:hover, html aside.sideLeft ul li:active, html aside.sideLeft ul li.active {
+  background: #ffffff;
+  border-radius: 80px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+html aside.sideLeft ul li:hover i, html aside.sideLeft ul li:active i, html aside.sideLeft ul li.active i {
+  background-position-x: 100%;
+}
+html aside.sideLeft ul li .basketball {
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
+}
+html aside.sideLeft ul li .socer {
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
+}
+html aside.sideLeft ul li .baseball {
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
+}
+html aside.sideLeft ul li .hockey {
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
+}
+html aside.sideLeft ul li .ball {
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
+}
+html aside.sideRight {
+  width: auto;
+  height: calc(100% - 217px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3019607843);
+  position: absolute;
+  top: 217px;
+  right: 0;
+  z-index: 50;
+  cursor: pointer;
+}
+html aside.sideRight .pic {
+  width: 175px;
+  height: 173px;
+}
+html aside.chatroom {
+  width: 290px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  z-index: 100;
+}
+html aside.chatroom .titleArea {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  background: #fa803f;
+  cursor: pointer;
+}
+html aside.chatroom .titleArea p {
+  color: #ffffff;
+  font-weight: bold;
+}
+html aside.chatroom .titleArea .online {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html aside.chatroom .titleArea .online .member_ic {
+  width: 15px;
+  height: 19px;
+  margin-right: 5px;
+}
+html aside.chatroom .content {
+  height: 0;
+}
+html aside.chatroom textarea {
+  display: none;
+}
+html aside.chatroom.active {
+  height: 300px;
+  background: #ffffff;
+}
+html aside.chatroom.active .content {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #e5e9ec;
+  border-right: 1px solid #e5e9ec;
+}
+html aside.chatroom.active .content .history {
+  width: 100%;
+  height: 70%;
+  padding: 10px;
+  border-bottom: 1px solid #e5e9ec;
+  overflow: hidden;
+}
+html aside.chatroom.active .content .history .text {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+html aside.chatroom.active .content .history .text::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
+  background: #2b6de7;
+  border-radius: 10px;
+}
+html aside.chatroom.active .content .history .text::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
+  background: #fa803f;
+}
+html aside.chatroom.active .content .history .text li {
+  width: auto;
+  height: auto;
+  display: block;
+  text-align: right;
+}
+html aside.chatroom.active .content .history .text li p {
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  display: inline-block;
+  background: #fa803f;
+  border-radius: 15px;
+  word-break: break-all;
+  padding: 10px;
+  margin: 5px;
+  color: #ffffff;
+}
+html aside.chatroom.active .content .inputArea {
+  width: 100%;
+  height: 23%;
+  padding: 5px;
+}
+html aside.chatroom.active .content .inputArea textarea {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+html aside.chatroom.active .content .inputArea textarea:focus {
+  resize: none;
+  outline: none;
 }

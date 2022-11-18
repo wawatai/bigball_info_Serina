@@ -58,8 +58,8 @@ background-size: 100%;
     background-size: 100%;
 }
 
-.gameBlock .title .decoPic{
-    background: url(../img/gameBlock_deco.png) no-repeat center;
+.gameBlock .title p::before {
+    background: url(../img/header_deco.png) no-repeat center;
     background-size: 100%;
 }
 
@@ -107,5 +107,10 @@ footer nav ul li:hover::after ,
 footer nav ul li:active::after ,
 footer nav ul li.active::after  {
     background: url(../img/switchBtn_active.png) no-repeat center;
+    background-size: 100%;
+}
+
+aside.chatroom .titleArea .member_ic {
+    background: url(../img/icon/online_ic.png) no-repeat center;
     background-size: 100%;
 }

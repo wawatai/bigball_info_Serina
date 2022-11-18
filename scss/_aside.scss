@@ -1,0 +1,202 @@
+aside {
+    //左側按鈕
+    &.sideLeft {
+        width: 80px;
+        height: calc(100% - 217px);
+        background: $side_bg;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 217px;
+        left: 0;
+        z-index: 50;
+
+        ul {
+            li {
+                width: 50px;
+                height: 53px;
+                background: transparent;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5px;
+                cursor: pointer;
+    
+                &:hover,&:active,&.active {
+                    background: $side_HOV_bg;
+                    border-radius: 80px;
+                    transition: 0.2s;
+    
+                    i {
+                        background-position-x: 100%;
+                    }
+                }
+    
+                    .basketball {
+                        width: 25px;
+                        height: 25px;
+                        background-position-x: 0%;
+                    }
+                    .socer {
+                        width: 25px;
+                        height: 25px;
+                        background-position-x: 0%;
+                    }
+                    .baseball {
+                        width: 25px;
+                        height: 25px;
+                        background-position-x: 0%;
+                    }
+                    .hockey {
+                        width: 25px;
+                        height: 25px;
+                        background-position-x: 0%;
+                    }
+                    .ball {
+                        width: 25px;
+                        height: 25px;
+                        background-position-x: 0%;
+                    }
+            }
+        } 
+    }
+    
+    //右側
+    &.sideRight {
+        width: auto;
+        height: calc(100% - 217px);
+        display: flex;
+        justify-content: center;
+        background: $sub_color;
+        padding: 10px;
+        box-shadow: 0px 2px 5px $shadow01;
+        position: absolute;
+        top: 217px;
+        right: 0;
+        z-index: 50;
+        cursor: pointer;
+
+        .pic {
+            width: 175px;
+            height: 173px;
+        }
+    }
+
+    &.chatroom {
+        width: 290px;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+        z-index: 100;
+
+        .titleArea {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background: $deco_color;
+            cursor: pointer;
+
+            p {
+                 color: $light_font;
+                 font-weight: bold;
+            }
+
+            .online {
+                width: auto;
+                height: 100%;
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+
+                .member_ic {
+                    width: 15px;
+                    height: 19px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .content {
+            height: 0;
+        }
+
+        textarea {
+            display: none;
+        }
+
+        &.active {
+            height: 300px;
+            background: $sub_color;
+
+            .content {
+                width: 100%;
+                height: 100%;
+                border-left: 1px solid $data_border;
+                border-right: 1px solid $data_border;
+
+                .history {
+                    width: 100%;
+                    height: 70%;
+                    padding: 10px;
+                    border-bottom: 1px solid $data_border;
+                    overflow: hidden;
+
+                    .text {
+                        width: 100%;
+                        height: 100%;
+                        overflow-y: auto;
+                        @include scrollBar;
+                        &::-webkit-scrollbar-thumb {
+                            background: $deco_color;
+                        }
+
+                        li {
+                            width: auto;
+                            height: auto;
+                            display: block;
+                            text-align: right;
+
+                            p {
+                                width: auto;
+                                max-width: 250px;
+                                height: auto;
+                                display: inline-block;
+                                background: $deco_color;
+                                border-radius: 15px;
+                                word-break: break-all;
+                                padding: 10px;
+                                margin: 5px;
+                                color: $light_font;  
+                            }
+                        }
+                    }
+                }
+                .inputArea {
+                    width: 100%;
+                    height: 23%;
+                    padding: 5px;
+
+                    textarea {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border: none;
+
+                        &:focus {
+                            resize: none;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
