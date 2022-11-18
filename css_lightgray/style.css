@@ -1,111 +1,101 @@
 @charset "UTF-8";
-header .smallNav::before,
-header .member::before {
-  background: url(../img/header_deco.png) no-repeat center;
-  background-size: contain;
+header {
+  background: url(../img_lightgray/header_bg.png) no-repeat top center;
 }
 
 header .smallNav i {
-  background: url(../img/icon/navList.png) no-repeat center;
+  background: url(../img_lightgray/icon/navList.png) no-repeat;
   background-size: 300%;
 }
 
 header .moneyDate i,
 header .other .lang {
-  background: url(../img/icon/moneyData.png) no-repeat center;
+  background: url(../img_lightgray/icon/moneyData.png) no-repeat center;
   background-size: 100%;
 }
 
 header .user .ac_ic {
-  background: url(../img/icon/user.png) no-repeat center;
+  background: url(../img_lightgray/icon/user.png) no-repeat center;
   background-size: 100%;
+}
+
+.topArea {
+  background: url(../img_lightgray/header_bg.png) no-repeat bottom center;
 }
 
 .sideLeft li .basketball {
-  background: url(../img/icon/sideLeft01_btn.png) no-repeat center;
-  background-size: 200%;
-}
-
-.sideLeft li .socer {
-  background: url(../img/icon/sideLeft02_btn.png) no-repeat center;
-  background-size: 200%;
-}
-
-.sideLeft li .baseball {
-  background: url(../img/icon/sideLeft03_btn.png) no-repeat center;
-  background-size: 200%;
-}
-
-.sideLeft li .hockey {
-  background: url(../img/icon/sideLeft04_btn.png) no-repeat center;
-  background-size: 200%;
-}
-
-.sideLeft li .ball {
-  background: url(../img/icon/sideLeft05_btn.png) no-repeat center;
-  background-size: 200%;
-}
-
-.funtionArea .collapse_ic {
-  background: url(../img/icon/collapase_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft01_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.switchBtn div:hover::before,
-.switchBtn div:active::before,
-.switchBtn div.active::before {
-  background: url(../img/switchBtn_active.png) no-repeat center;
+.sideLeft li .socer {
+  background: url(../img_lightgray/icon/sideLeft02_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+.sideLeft li .baseball {
+  background: url(../img_lightgray/icon/sideLeft03_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+.sideLeft li .hockey {
+  background: url(../img_lightgray/icon/sideLeft04_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+.sideLeft li .ball {
+  background: url(../img_lightgray/icon/sideLeft05_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+.funtionArea .collapse_ic {
+  background: url(../img_lightgray/icon/collapase_ic.png) no-repeat center;
   background-size: 100%;
 }
 
 .gameBlock .state .anal_ic {
-  background: url(../img/icon/anal_ic.png) no-repeat;
-  background-size: 100%;
-}
-
-.gameBlock .title p::before {
-  background: url(../img/header_deco.png) no-repeat center;
+  background: url(../img_lightgray/icon/anal_ic.png) no-repeat;
   background-size: 100%;
 }
 
 .gameBlock .arrow {
-  background: url(../img/icon/arrow_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/arrow_ic.png) no-repeat center;
   background-size: 100%;
 }
 
 .gameBlock .status .detail .left i.red,
 .gameBlock .status .detail .left i.yellow {
-  background: url(../img/icon/point_state.png) no-repeat center;
+  background: url(../img_lightgray/icon/point_state.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideRight .pic {
-  background: url(../img/rightside_pic.png) no-repeat center;
+  background: url(../img_lightgray/rightside_pic.png) no-repeat center;
   background-size: contain;
 }
 
 footer i.help_ic {
-  background: url(../img/icon/fnav01.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav01.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.feedBack_ic {
-  background: url(../img/icon/fnav02.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav02.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.promote_ic {
-  background: url(../img/icon/fnav03.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav03.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.policy_ic {
-  background: url(../img/icon/fnav04.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav04.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.about_ic {
-  background: url(../img/icon/fnav05.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav05.png) no-repeat;
   background-size: 100%;
 }
 
@@ -115,12 +105,12 @@ footer nav ul li.active::before,
 footer nav ul li:hover::after,
 footer nav ul li:active::after,
 footer nav ul li.active::after {
-  background: url(../img/switchBtn_active.png) no-repeat center;
+  background: url(../img_lightgray/switchBtn_active.png) no-repeat center;
   background-size: 100%;
 }
 
 aside.chatroom .titleArea .member_ic {
-  background: url(../img/icon/online_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/online_ic.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -216,13 +206,13 @@ html body {
   position: relative;
 }
 html header {
-  width: auto;
+  width: 100%;
   min-width: 1000px;
   height: 97px;
-  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
   position: relative;
 }
 html header .smallNav {
@@ -241,13 +231,15 @@ html header .smallNav {
   position: relative;
 }
 html header .smallNav li {
-  width: 58px;
+  width: auto;
   height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #172c63;
-  font-size: 13px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #ffffff;
+  font-size: 15px;
   font-weight: bold;
   margin-right: 15px;
   cursor: pointer;
@@ -260,26 +252,19 @@ html header .smallNav li i.home_ic {
   background-position-x: 0%;
 }
 html header .smallNav li i.discount_ic {
-  background-position-x: 50%;
+  background-position-x: 51.5%;
 }
 html header .smallNav li i.master_ic {
   background-position-x: 100%;
 }
 html header .smallNav li p {
+  width: auto;
   padding: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 html header .smallNav li:last-child {
   margin-right: 0;
-}
-html header .smallNav::before {
-  content: "";
-  width: 141px;
-  height: 97px;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 html header .mid {
   width: 100%;
@@ -288,13 +273,12 @@ html header .mid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #2b6de7;
   margin: 0 auto;
   position: relative;
 }
 html header .mid .logo {
-  width: 85px;
-  height: 23px;
+  width: 125px;
+  height: 33px;
   margin: auto;
 }
 html header .member {
@@ -310,21 +294,8 @@ html header .member {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 10px 0 130px;
+  padding: 10px;
   position: relative;
-}
-html header .member::before {
-  content: "";
-  width: 141px;
-  height: 97px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: -1px;
 }
 html header .member .main {
   width: auto;
@@ -332,38 +303,45 @@ html header .member .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px 0 0;
   margin: 10px 0;
 }
 html header .member .main .moneyDate {
   width: 50%;
   height: 100%;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 html header .member .main .moneyDate div {
+  width: auto;
+  height: auto;
+  background: rgba(60, 98, 141, 0.4392156863);
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px;
+  margin-bottom: 5px;
 }
 html header .member .main .moneyDate div p {
   width: 106px;
-  height: 20px;
-  border: 1px solid #ecedef;
-  padding: 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  height: auto;
 }
 html header .member .main .moneyDate div:last-child {
   margin-bottom: 0px;
 }
 html header .member .main .moneyDate i {
-  width: 18px;
+  width: 21px;
   height: 16px;
   margin-right: 20px;
 }
@@ -382,6 +360,9 @@ html header .member .main .user {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: rgba(60, 98, 141, 0.4392156863);
+  border-radius: 5px;
+  padding: 20px;
   position: relative;
   cursor: pointer;
 }
@@ -392,7 +373,7 @@ html header .member .main .user .ac_ic {
 }
 html header .member .main .user p {
   width: auto;
-  color: #172c63;
+  color: #ffffff;
   font-size: 18px;
   font-weight: bold;
   margin-right: 10px;
@@ -402,16 +383,16 @@ html header .member .main .user .arrow {
   height: 0;
   border-style: solid;
   border-width: 6px 4px 0 4px;
-  border-color: #fa803f transparent transparent transparent;
+  border-color: #ffffff transparent transparent transparent;
 }
 html header .member .dropList {
   display: none;
   width: auto;
   height: auto;
-  background: #0e459f;
+  background: #4a4a4a;
   position: absolute;
-  top: 55px;
-  right: 20px;
+  top: 79px;
+  right: 10px;
   z-index: 200;
 }
 html header .member .dropList.display {
@@ -439,7 +420,7 @@ html header .member .dropList li i {
   margin-right: 6px;
 }
 html header .member .dropList li:hover, html header .member .dropList li:active, html header .member .dropList li.active {
-  background: #2b6de7;
+  background: #ff174e;
 }
 html header .member .other {
   width: 100%;
@@ -463,7 +444,7 @@ html header .member .other div {
           align-items: center;
 }
 html header .member .other div P {
-  color: #172c63;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   margin-right: 10px;
@@ -474,7 +455,7 @@ html header .member .other div > i {
   height: 0;
   border-style: solid;
   border-width: 6px 4px 0 4px;
-  border-color: #fa803f transparent transparent transparent;
+  border-color: #ffffff transparent transparent transparent;
 }
 html header .member .other div.cs {
   margin-right: 10px;
@@ -487,12 +468,12 @@ html header .member .other .lang {
   cursor: pointer;
 }
 html header .member p {
-  color: #172c63;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
 }
 html header .member p a {
-  color: #172c63;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -500,7 +481,7 @@ html header .langDrop {
   display: none;
   width: auto;
   height: auto;
-  background: #0e459f;
+  background: #4a4a4a;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -509,8 +490,8 @@ html header .langDrop {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: 97px;
-  right: 20px;
+  top: 112px;
+  right: 28px;
   z-index: 200;
 }
 html header .langDrop.display {
@@ -537,13 +518,13 @@ html header .langDrop li i {
   margin-right: 6px;
 }
 html header .langDrop li:hover, html header .langDrop li:active, html header .langDrop li.active {
-  background: #2b6de7;
+  background: #ff174e;
 }
 html .mainwrap {
   width: 100%;
   min-width: 1000px;
   height: 735px;
-  background: #dddddd;
+  background: #d8d8db;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,7 +538,6 @@ html .mainwrap .topArea {
   width: 100%;
   min-width: 1000px;
   height: 120px;
-  background: #e6ecf8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,8 +550,6 @@ html .mainwrap .topArea {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 html .mainwrap .topArea .outterBox {
   width: 100%;
@@ -587,7 +565,7 @@ html .mainwrap .topArea .outterBox::-webkit-scrollbar {
   height: 5px;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #a1a1a1;
   border-radius: 10px;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar-track {
@@ -597,12 +575,11 @@ html .mainwrap .topArea .outterBox::-webkit-scrollbar-track {
 html .mainwrap .topArea .outterBox .tag {
   width: 350px;
   height: 85px;
-  background: #ffffff;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background: rgba(60, 98, 141, 0.4392156863);
+  padding: 10px 10px 10px 15px;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
+  border: 1px solid #5785c7;
   margin-right: 20px;
   border-radius: 8px;
   -ms-flex-negative: 0;
@@ -633,40 +610,43 @@ html .mainwrap .topArea .outterBox .tag .content .team {
   height: 100%;
 }
 html .mainwrap .topArea .outterBox .tag .content .team p {
-  color: #172c63;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
 }
 html .mainwrap .topArea .outterBox .tag .content .point {
   width: 33%;
   height: 100%;
+  text-align: center;
 }
 html .mainwrap .topArea .outterBox .tag .content .point p {
-  color: #dd5664;
+  color: #ff4370;
   font-size: 20px;
   font-weight: bold;
   padding: 5px 0;
 }
 html .mainwrap .topArea .outterBox .tag .content .point .detail {
+  color: #a1a1a1;
   margin-top: 0;
 }
 html .mainwrap .topArea .outterBox .tag .content .detail {
-  color: #7d8697;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
+  text-align: center;
   margin-top: 15px;
 }
 html .mainwrap .topArea .outterBox .tag:nth-of-type(1)::before {
-  background: #ff8451;
+  background: #ff174e;
 }
 html .mainwrap .topArea .outterBox .tag:nth-of-type(2)::before {
-  background: #2b6de7;
+  background: #ff8f17;
 }
 html .mainwrap .topArea .outterBox .tag:nth-of-type(3)::before {
-  background: #10ba3f;
+  background: #17ff63;
 }
 html .mainwrap .topArea .outterBox .tag:nth-of-type(4)::before {
-  background: #de5974;
+  background: #17ecff;
 }
 html .mainwrap .topArea .outterBox .tag::before {
   content: "";
@@ -713,13 +693,11 @@ html .mainwrap .downArea .middle .funtionArea {
 html .mainwrap .downArea .middle .funtionArea .switchBtn {
   width: 301px;
   height: 37px;
-  background: #ffffff;
-  border-radius: 10px;
+  background: #d8d8db;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
   overflow: hidden;
   cursor: pointer;
 }
@@ -729,18 +707,22 @@ html .mainwrap .downArea .middle .funtionArea .switchBtn div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#edf1f6), color-stop(68%, #ffffff));
+  background: linear-gradient(bottom, #edf1f6 0%, #ffffff 68%);
+  border-radius: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #a4aab6;
+  color: #001e53;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover, html .mainwrap .downArea .middle .funtionArea .switchBtn div:active, html .mainwrap .downArea .middle .funtionArea .switchBtn div.active {
-  background: #2b6de7;
-  border-radius: 10px 28px 0 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff2d5f), to(#cd0434));
+  background: linear-gradient(bottom, #ff2d5f 0%, #cd0434 100%);
+  border-radius: 5px;
   color: #ffffff;
   position: relative;
 }
@@ -752,21 +734,8 @@ html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover::before, html
   bottom: 0;
   right: -12px;
 }
-html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child:hover, html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child:active, html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child.active {
-  background: #2b6de7;
-  border-radius: 28px 10px 0 0;
-  color: #ffffff;
-  position: relative;
-}
-html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child:hover::before, html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child:active::before, html .mainwrap .downArea .middle .funtionArea .switchBtn div:last-child.active::before {
-  content: "";
-  width: 12px;
-  height: 11px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  position: absolute;
-  bottom: 0;
-  left: -10px;
+html .mainwrap .downArea .middle .funtionArea .switchBtn div:nth-of-type(2) {
+  margin: 0 5px;
 }
 html .mainwrap .downArea .middle .funtionArea .collapse {
   width: 118px;
@@ -804,7 +773,7 @@ html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar {
   height: 5px;
 }
 html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #a1a1a1;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-track {
@@ -842,7 +811,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background: #2b6de7;
   color: #7b829f;
   font-size: 20px;
   font-weight: bold;
@@ -919,7 +887,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
           align-items: center;
   background: #efefef;
   border-radius: 10px;
-  color: #a4aab6;
+  color: #a1a1a1;
   font-size: 12px;
   font-weight: bold;
   margin-right: 10px;
@@ -928,7 +896,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   width: 10px;
   height: 10px;
   margin-right: 5px;
-  background-color: #a4aab6;
+  background-color: #a1a1a1;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active {
   background: #ff8656;
@@ -944,7 +912,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   background-position-y: 0%;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active {
-  background: #2b6de7;
+  background: #4a4a4a;
   color: #ffffff;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active .anal_ic {
@@ -982,7 +950,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
           box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child p {
-  color: #a4aab6;
+  color: #a1a1a1;
   margin-bottom: 8px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child p:last-child {
@@ -995,7 +963,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
           box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p {
-  color: #172c63;
+  color: #001e53;
   margin-bottom: 15px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p:last-child {
@@ -1010,7 +978,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .score {
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .score p {
-  color: #172c63;
+  color: #001e53;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -1047,7 +1015,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList:
   height: 5px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #a1a1a1;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-track {
@@ -1085,7 +1053,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fa803f;
+  color: #ff174e;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li .data {
@@ -1099,7 +1067,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #172c63;
+  color: #001e53;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -1123,7 +1091,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .itemName 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fa803f;
+  color: #ff174e;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
@@ -1139,7 +1107,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  color: #172c63;
+  color: #001e53;
   font-size: 11px;
   font-weight: bolder;
 }
@@ -1182,7 +1150,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #a4aab6;
+  color: #a1a1a1;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) {
@@ -1200,7 +1168,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
 html footer {
   width: 100%;
   height: auto;
-  background: #f1f8ff;
+  background: #4a4a4a;
 }
 html footer nav ul {
   width: 100%;
@@ -1245,7 +1213,7 @@ html footer nav ul li i {
   background-position-y: 0%;
 }
 html footer nav ul li:hover, html footer nav ul li:active, html footer nav ul li.active {
-  background: #2b6de7;
+  background: #4a4a4a;
   border-radius: 30px 30px 0 0;
   color: #ffffff;
 }
@@ -1282,7 +1250,7 @@ html footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #2b6de7;
+  background: #4a4a4a;
 }
 html footer .copyright p {
   color: #ffffff;
@@ -1290,7 +1258,7 @@ html footer .copyright p {
 html aside.sideLeft {
   width: 80px;
   height: calc(100% - 217px);
-  background: #0e459f;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1298,19 +1266,15 @@ html aside.sideLeft {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: absolute;
   top: 217px;
   left: 0;
   z-index: 50;
 }
 html aside.sideLeft ul li {
-  width: 50px;
-  height: 53px;
+  width: 100%;
+  height: 60px;
   background: transparent;
-  border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1320,42 +1284,33 @@ html aside.sideLeft ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 5px;
   cursor: pointer;
 }
 html aside.sideLeft ul li:hover, html aside.sideLeft ul li:active, html aside.sideLeft ul li.active {
-  background: #ffffff;
-  border-radius: 80px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff2d5f), to(#cd0434));
+  background: linear-gradient(bottom, #ff2d5f 0%, #cd0434 100%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-html aside.sideLeft ul li:hover i, html aside.sideLeft ul li:active i, html aside.sideLeft ul li.active i {
-  background-position-x: 100%;
 }
 html aside.sideLeft ul li .basketball {
   width: 25px;
   height: 25px;
-  background-position-x: 0%;
 }
 html aside.sideLeft ul li .socer {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
+  width: 30px;
+  height: 28px;
 }
 html aside.sideLeft ul li .baseball {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
+  width: 30px;
+  height: 28px;
 }
 html aside.sideLeft ul li .hockey {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
+  width: 39px;
+  height: 28px;
 }
 html aside.sideLeft ul li .ball {
-  width: 25px;
-  height: 25px;
-  background-position-x: 0%;
+  width: 30px;
+  height: 28px;
 }
 html aside.sideRight {
   width: auto;
@@ -1403,7 +1358,7 @@ html aside.chatroom .titleArea {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
-  background: #fa803f;
+  background: #ff174e;
   cursor: pointer;
 }
 html aside.chatroom .titleArea p {
@@ -1460,7 +1415,7 @@ html aside.chatroom.active .content .history .text::-webkit-scrollbar {
   height: 5px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #a1a1a1;
   border-radius: 10px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-track {
@@ -1468,7 +1423,7 @@ html aside.chatroom.active .content .history .text::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
-  background: #fa803f;
+  background: #ff174e;
 }
 html aside.chatroom.active .content .history .text li {
   width: auto;
@@ -1481,7 +1436,7 @@ html aside.chatroom.active .content .history .text li p {
   max-width: 250px;
   height: auto;
   display: inline-block;
-  background: #fa803f;
+  background: #ff174e;
   border-radius: 15px;
   word-break: break-all;
   padding: 10px;

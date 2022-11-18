@@ -1,25 +1,26 @@
 //主色調
-$main_color: #2b6de7;
+$main_color: #4a4a4a;
 $sub_color: #ffffff;
-$deco_color: #fa803f;
+$deco_color: #ff174e;
 
 //字色
-$main_font: #172c63;
+$main_font: #001e53;
 $sub_font: #7d8697;
 $light_font: #ffffff;
-$lightgray_font: #a4aab6;
-$score: #dd5664;
+$lightgray_font: #a1a1a1;
+$score: #ff4370;
 
 //border
 $header_border: #ecedef;
 $data_border: #e5e9ec;
+$tag_border: #5785c7;
 
 //陰影
 $shadow01: #0000004d;
 $shadow02: #00000021;
 
 //scrollbar
-$scrollBar_thumb: $main_color;
+$scrollBar_thumb: #a1a1a1;
 $scrollBar_track: #efefef;
 
 @mixin scrollBar {
@@ -41,23 +42,22 @@ $scrollBar_track: #efefef;
 }
 
 //header
-$header_font: #172c63;
-$header_drop_bg: #0e459f;
-$header_drop_font: #ffffff;
+$header_font: $light_font;
+$header_memb_BG: #3c628d70;
 
 //賽事標籤
-$tag_Bg: #e6ecf8;
-$tag_01: #ff8451;
-$tag_02: $main_color;
-$tag_03: #10ba3f;
-$tag_04: #de5974;
+$tag_01: #ff174e;
+$tag_02: #ff8f17;
+$tag_03: #17ff63;
+$tag_04: #17ecff;
 
 //左側按鈕列
-$side_bg: #0e459f;
-$side_HOV_bg: #ffffff;
+$side_bg: $sub_color;
+$side_HOV_bg: linear-gradient(bottom,#ff2d5f 0%, #cd0434 100%);
 
 //middle
-$mid_bg: #dddddd;
+$mid_bg: #d8d8db;
+$switch_Btn: linear-gradient(bottom, #edf1f6 0%, #ffffff 68%);
 
 //gameBlock
 $gametitle_font: #7b829f;
@@ -67,5 +67,5 @@ $state_Analysis: $main_color;
 
 
 //footer
-$footer_BG: #f1f8ff;
+$footer_BG: #4a4a4a;
 

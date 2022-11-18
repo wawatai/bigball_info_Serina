@@ -1,0 +1,16 @@
+html {
+    width: 100%;
+    height: 100%;
+
+    body {
+        width: auto;
+        height: 100%;
+        position: relative;
+
+    }
+
+    @import "./_header";
+    @import "./_mainWrap";
+    @import "./_footer";
+    @import "./_aside";
+}

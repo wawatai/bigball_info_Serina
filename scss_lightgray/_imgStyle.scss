@@ -1,0 +1,107 @@
+//header
+header {
+    background: url(../img_lightgray/header_bg.png) no-repeat top center;
+}
+header .smallNav i {
+    background: url(../img_lightgray/icon/navList.png)no-repeat;
+    background-size: 300%;
+}
+
+header .moneyDate i,
+header .other .lang{
+    background: url(../img_lightgray/icon/moneyData.png) no-repeat center;
+    background-size: 100%;
+}
+
+header .user .ac_ic {
+    background: url(../img_lightgray/icon/user.png) no-repeat center;
+    background-size: 100%;
+}
+
+//topArea
+.topArea {
+    background: url(../img_lightgray/header_bg.png) no-repeat bottom center;
+}
+
+//sideLeft 左側按鈕
+.sideLeft li .basketball{
+    background: url(../img_lightgray/icon/sideLeft01_btn.png) no-repeat center;
+    background-size: 100%;
+}
+.sideLeft li .socer {
+    background: url(../img_lightgray/icon/sideLeft02_btn.png) no-repeat center;
+    background-size: 100%;
+}
+.sideLeft li .baseball{
+    background: url(../img_lightgray/icon/sideLeft03_btn.png) no-repeat center;
+    background-size: 100%;
+}
+.sideLeft li .hockey{
+    background: url(../img_lightgray/icon/sideLeft04_btn.png) no-repeat center;
+    background-size: 100%;
+}
+.sideLeft li .ball{
+    background: url(../img_lightgray/icon/sideLeft05_btn.png) no-repeat center;
+    background-size: 100%;
+}
+.funtionArea .collapse_ic {
+    background: url(../img_lightgray/icon/collapase_ic.png) no-repeat center;
+    background-size: 100%;
+}
+
+.gameBlock .state .anal_ic {
+    background: url(../img_lightgray/icon/anal_ic.png) no-repeat;
+    background-size: 100%;
+}
+
+.gameBlock .arrow {
+    background: url(../img_lightgray/icon/arrow_ic.png) no-repeat center;
+    background-size: 100%;
+}
+
+.gameBlock .status .detail .left i.red,
+.gameBlock .status .detail .left i.yellow {
+    background: url(../img_lightgray/icon/point_state.png) no-repeat center;
+    background-size: 100%;
+}
+
+.sideRight .pic {
+    background: url(../img_lightgray/rightside_pic.png) no-repeat center;
+    background-size: contain;
+}
+
+//footer
+footer i.help_ic {
+    background: url(../img_lightgray/icon/fnav01.png) no-repeat;
+    background-size: 100%;
+}
+footer i.feedBack_ic {
+    background: url(../img_lightgray/icon/fnav02.png) no-repeat;
+    background-size: 100%;
+}
+footer i.promote_ic {
+    background: url(../img_lightgray/icon/fnav03.png) no-repeat;
+    background-size: 100%;
+}
+footer i.policy_ic {
+    background: url(../img_lightgray/icon/fnav04.png) no-repeat;
+    background-size: 100%;
+}
+footer i.about_ic {
+    background: url(../img_lightgray/icon/fnav05.png) no-repeat;
+    background-size: 100%;
+}
+footer nav ul li:hover::before,
+footer nav ul li:active::before,
+footer nav ul li.active::before,
+footer nav ul li:hover::after ,
+footer nav ul li:active::after ,
+footer nav ul li.active::after  {
+    background: url(../img_lightgray/switchBtn_active.png) no-repeat center;
+    background-size: 100%;
+}
+
+aside.chatroom .titleArea .member_ic {
+    background: url(../img_lightgray/icon/online_ic.png) no-repeat center;
+    background-size: 100%;
+}
