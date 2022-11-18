@@ -412,7 +412,7 @@ html header .member .dropList {
   position: absolute;
   top: 55px;
   right: 20px;
-  z-index: 20;
+  z-index: 200;
 }
 html header .member .dropList.display {
   display: block;
@@ -511,7 +511,7 @@ html header .langDrop {
   position: absolute;
   top: 97px;
   right: 20px;
-  z-index: 10;
+  z-index: 200;
 }
 html header .langDrop.display {
   display: block;
