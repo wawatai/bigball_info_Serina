@@ -858,7 +858,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title p {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  padding: 11px 60px 6px 40px;
+  padding: 11px 60px 11px 40px;
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .title p::before {
