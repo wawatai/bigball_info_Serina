@@ -22,10 +22,14 @@ $(function(){
 
     //全部收起
     $(".funtionArea .collapse").click(function(){
-        if ($(".middle .dataBox .gameBlock"))
+        if ($(".middle .dataBox .gameBlock").hasClass("active"))
         {
-            $(".middle .dataBox .gameBlock:not(.active)").toggleClass("active");
+            $(".middle .dataBox .gameBlock").removeClass("active");
         } 
+        else
+        {
+            $(".middle .dataBox .gameBlock").addClass("active");
+        }
     })
 
     //點擊收起

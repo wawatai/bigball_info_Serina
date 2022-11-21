@@ -1,7 +1,4 @@
 //header
-header {
-    background: url(../img_pink/header_bg.png) no-repeat top center;
-}
 header .smallNav i {
     background: url(../img_pink/icon/navList.png)no-repeat;
     background-size: 300%;
@@ -19,33 +16,36 @@ header .user .ac_ic {
 }
 
 //topArea
-.topArea {
-    background: url(../img_pink/header_bg.png) no-repeat bottom center;
-}
+
 
 //sideLeft 左側按鈕
 .sideLeft li .basketball{
     background: url(../img_pink/icon/sideLeft01_btn.png) no-repeat center;
-    background-size: 100%;
+    background-size: 200%;
 }
 .sideLeft li .socer {
     background: url(../img_pink/icon/sideLeft02_btn.png) no-repeat center;
-    background-size: 100%;
+    background-size: 200%;
 }
 .sideLeft li .baseball{
     background: url(../img_pink/icon/sideLeft03_btn.png) no-repeat center;
-    background-size: 100%;
+    background-size: 200%;
 }
 .sideLeft li .hockey{
     background: url(../img_pink/icon/sideLeft04_btn.png) no-repeat center;
-    background-size: 100%;
+    background-size: 200%;
 }
 .sideLeft li .ball{
     background: url(../img_pink/icon/sideLeft05_btn.png) no-repeat center;
-    background-size: 100%;
+    background-size: 200%;
 }
 .funtionArea .collapse_ic {
     background: url(../img_pink/icon/collapase_ic.png) no-repeat center;
+    background-size: 100%;
+}
+
+.gameBlock .title p::before {
+    background: url(../img_pink/gameBlock_deco.png) no-repeat center;
     background-size: 100%;
 }
 
@@ -71,10 +71,6 @@ header .user .ac_ic {
 }
 
 //footer
-footer .copyright {
-    background: url(../img_pink/footer_bg.png) no-repeat center;  
-    background-size: 100%;
-}
 footer i.help_ic {
     background: url(../img_pink/icon/fnav01.png) no-repeat;
     background-size: 100%;

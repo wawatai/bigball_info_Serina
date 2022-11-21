@@ -1,8 +1,4 @@
 @charset "UTF-8";
-header {
-  background: url(../img_pink/header_bg.png) no-repeat top center;
-}
-
 header .smallNav i {
   background: url(../img_pink/icon/navList.png) no-repeat;
   background-size: 300%;
@@ -19,37 +15,38 @@ header .user .ac_ic {
   background-size: 100%;
 }
 
-.topArea {
-  background: url(../img_pink/header_bg.png) no-repeat bottom center;
-}
-
 .sideLeft li .basketball {
   background: url(../img_pink/icon/sideLeft01_btn.png) no-repeat center;
-  background-size: 100%;
+  background-size: 200%;
 }
 
 .sideLeft li .socer {
   background: url(../img_pink/icon/sideLeft02_btn.png) no-repeat center;
-  background-size: 100%;
+  background-size: 200%;
 }
 
 .sideLeft li .baseball {
   background: url(../img_pink/icon/sideLeft03_btn.png) no-repeat center;
-  background-size: 100%;
+  background-size: 200%;
 }
 
 .sideLeft li .hockey {
   background: url(../img_pink/icon/sideLeft04_btn.png) no-repeat center;
-  background-size: 100%;
+  background-size: 200%;
 }
 
 .sideLeft li .ball {
   background: url(../img_pink/icon/sideLeft05_btn.png) no-repeat center;
-  background-size: 100%;
+  background-size: 200%;
 }
 
 .funtionArea .collapse_ic {
   background: url(../img_pink/icon/collapase_ic.png) no-repeat center;
+  background-size: 100%;
+}
+
+.gameBlock .title p::before {
+  background: url(../img_pink/gameBlock_deco.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -72,11 +69,6 @@ header .user .ac_ic {
 .sideRight .pic {
   background: url(../img_pink/rightside_pic.png) no-repeat center;
   background-size: contain;
-}
-
-footer .copyright {
-  background: url(../img_pink/footer_bg.png) no-repeat center;
-  background-size: 100%;
 }
 
 footer i.help_ic {
@@ -198,6 +190,8 @@ html {
 html body {
   width: auto;
   height: 100%;
+  background: #be1451;
+  padding: 0 22px;
   position: relative;
 }
 html header {
@@ -212,7 +206,7 @@ html header {
 }
 html header .smallNav {
   width: auto;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,8 +216,11 @@ html header .smallNav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 100px 0 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px 40px;
   position: relative;
+  margin: auto;
 }
 html header .smallNav li {
   width: auto;
@@ -233,10 +230,10 @@ html header .smallNav li {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  color: #ffffff;
+  color: #27425f;
   font-size: 15px;
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 22px;
   cursor: pointer;
 }
 html header .smallNav li i {
@@ -247,7 +244,7 @@ html header .smallNav li i.home_ic {
   background-position-x: 0%;
 }
 html header .smallNav li i.discount_ic {
-  background-position-x: 51.5%;
+  background-position-x: 50%;
 }
 html header .smallNav li i.master_ic {
   background-position-x: 100%;
@@ -306,18 +303,28 @@ html header .member .main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0 0;
-  margin: 10px 0;
+  margin: auto 0;
+  position: relative;
+}
+html header .member .main::before {
+  content: "";
+  width: 36px;
+  height: 43px;
+  background: #fcd9e3;
+  border: 1px solid #be1451;
+  border-radius: 15px;
+  position: absolute;
+  right: 82px;
+  z-index: 2;
 }
 html header .member .main .moneyDate {
   width: 50%;
-  height: 100%;
+  height: auto;
   margin-right: 10px;
 }
 html header .member .main .moneyDate div {
   width: auto;
   height: auto;
-  background: rgba(60, 98, 141, 0.4392156863);
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,20 +332,25 @@ html header .member .main .moneyDate div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6px;
   margin-bottom: 5px;
 }
 html header .member .main .moneyDate div p {
-  width: 106px;
+  width: 100%;
   height: auto;
+  white-space: nowrap;
+  padding: 5px 10px;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
 }
 html header .member .main .moneyDate div:last-child {
   margin-bottom: 0px;
 }
 html header .member .main .moneyDate i {
-  width: 21px;
+  width: 27px;
   height: 18px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 html header .member .main .moneyDate i.money_ic {
   background-position-y: 0%;
@@ -355,9 +367,9 @@ html header .member .main .user {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(60, 98, 141, 0.4392156863);
-  border-radius: 5px;
-  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
   position: relative;
   cursor: pointer;
 }
@@ -365,10 +377,11 @@ html header .member .main .user .ac_ic {
   width: 20px;
   height: 24px;
   margin-right: 20px;
+  z-index: 10;
 }
 html header .member .main .user p {
   width: auto;
-  color: #ffffff;
+  color: #27425f;
   font-size: 18px;
   font-weight: bold;
   margin-right: 10px;
@@ -378,13 +391,13 @@ html header .member .main .user .arrow {
   height: 0;
   border-style: solid;
   border-width: 6px 4px 0 4px;
-  border-color: #ffffff transparent transparent transparent;
+  border-color: #dd2064 transparent transparent transparent;
 }
 html header .member .dropList {
   display: none;
   width: auto;
   height: auto;
-  background: #4a4a4a;
+  background: #ffffff;
   position: absolute;
   top: 79px;
   right: 10px;
@@ -403,7 +416,7 @@ html header .member .dropList li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #27425f;
   padding: 5px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -415,7 +428,8 @@ html header .member .dropList li i {
   margin-right: 6px;
 }
 html header .member .dropList li:hover, html header .member .dropList li:active, html header .member .dropList li.active {
-  background: #ff174e;
+  background: #be1451;
+  color: #ffffff;
 }
 html header .member .other {
   width: 100%;
@@ -428,7 +442,8 @@ html header .member .other {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 15px 5px 0;
+  padding: 0 0 5px 0;
+  margin-top: 5px;
 }
 html header .member .other div {
   display: -webkit-box;
@@ -476,7 +491,7 @@ html header .langDrop {
   display: none;
   width: auto;
   height: auto;
-  background: #4a4a4a;
+  background: #ffffff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -485,8 +500,8 @@ html header .langDrop {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: 112px;
-  right: 28px;
+  top: 97px;
+  right: 30px;
   z-index: 200;
 }
 html header .langDrop.display {
@@ -501,7 +516,7 @@ html header .langDrop li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #27425f;
   padding: 3px 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -513,13 +528,13 @@ html header .langDrop li i {
   margin-right: 6px;
 }
 html header .langDrop li:hover, html header .langDrop li:active, html header .langDrop li.active {
-  background: #ff174e;
+  background: #be1451;
+  color: #ffffff;
 }
 html .mainwrap {
   width: 100%;
   min-width: 1000px;
   height: 735px;
-  background: #d8d8db;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,6 +560,10 @@ html .mainwrap .topArea {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
 }
 html .mainwrap .topArea .outterBox {
   width: 100%;
@@ -560,21 +579,20 @@ html .mainwrap .topArea .outterBox::-webkit-scrollbar {
   height: 5px;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
+  background: #a01142;
   border-radius: 10px;
 }
 html .mainwrap .topArea .outterBox::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #c5ccd3;
   border-radius: 10px;
 }
 html .mainwrap .topArea .outterBox .tag {
   width: 350px;
   height: 85px;
-  background: rgba(60, 98, 141, 0.4392156863);
+  background: #ffffff;
   padding: 10px 10px 10px 15px;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1294117647);
-  border: 1px solid #5785c7;
   margin-right: 20px;
   border-radius: 8px;
   -ms-flex-negative: 0;
@@ -605,7 +623,7 @@ html .mainwrap .topArea .outterBox .tag .content .team {
   height: 100%;
 }
 html .mainwrap .topArea .outterBox .tag .content .team p {
-  color: #ffffff;
+  color: #27425f;
   font-size: 14px;
   font-weight: bold;
 }
@@ -615,47 +633,26 @@ html .mainwrap .topArea .outterBox .tag .content .point {
   text-align: center;
 }
 html .mainwrap .topArea .outterBox .tag .content .point p {
-  color: #ff4370;
+  color: #dd2064;
   font-size: 20px;
   font-weight: bold;
   padding: 5px 0;
 }
 html .mainwrap .topArea .outterBox .tag .content .point .detail {
-  color: #a1a1a1;
+  color: #c4c9ce;
   margin-top: 0;
 }
 html .mainwrap .topArea .outterBox .tag .content .detail {
-  color: #ffffff;
+  color: #c4c9ce;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
 }
-html .mainwrap .topArea .outterBox .tag:nth-of-type(1)::before {
-  background: #ff174e;
-}
-html .mainwrap .topArea .outterBox .tag:nth-of-type(2)::before {
-  background: #ff8f17;
-}
-html .mainwrap .topArea .outterBox .tag:nth-of-type(3)::before {
-  background: #17ff63;
-}
-html .mainwrap .topArea .outterBox .tag:nth-of-type(4)::before {
-  background: #17ecff;
-}
-html .mainwrap .topArea .outterBox .tag::before {
-  content: "";
-  width: 5px;
-  height: 100%;
-  border-radius: 8px 0 0 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 html .mainwrap .downArea {
   width: 100%;
   height: 100%;
-  padding: 0 195px 0 80px;
+  padding: 0 215px 0 65px;
   position: relative;
   overflow: hidden;
 }
@@ -686,38 +683,44 @@ html .mainwrap .downArea .middle .funtionArea {
   padding: 12px 7px 7px 12px;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn {
-  width: 301px;
-  height: 37px;
-  background: #d8d8db;
-  border-radius: 5px;
+  width: auto;
+  height: auto;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
+  border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 3px;
   overflow: hidden;
   cursor: pointer;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div {
-  width: 108px;
-  height: 100%;
+  width: 80px;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left bottom, left top, from(#edf1f6), color-stop(68%, #ffffff));
-  background: linear-gradient(bottom, #edf1f6 0%, #ffffff 68%);
-  border-radius: 5px;
+  background: transparent;
+  border-radius: 50px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #001e53;
+  color: #ff92b4;
   font-weight: bold;
+  margin: auto;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover, html .mainwrap .downArea .middle .funtionArea .switchBtn div:active, html .mainwrap .downArea .middle .funtionArea .switchBtn div.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff2d5f), to(#cd0434));
-  background: linear-gradient(bottom, #ff2d5f 0%, #cd0434 100%);
-  border-radius: 5px;
+  background: #be1451;
+  border-radius: 50px;
+  border: 1px solid #dd2064;
   color: #ffffff;
   position: relative;
 }
@@ -730,10 +733,10 @@ html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover::before, html
   right: -12px;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div:nth-of-type(2) {
-  margin: 0 5px;
+  margin: auto 3px;
 }
 html .mainwrap .downArea .middle .funtionArea .collapse {
-  width: 118px;
+  width: 72px;
   height: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,17 +748,18 @@ html .mainwrap .downArea .middle .funtionArea .collapse {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
 }
 html .mainwrap .downArea .middle .funtionArea .collapse i {
   width: 24px;
   height: 15px;
-  margin-right: 8px;
 }
 html .mainwrap .downArea .middle .funtionArea .collapse p {
+  color: transparent;
   font-size: 11px;
   font-weight: bold;
+  display: none;
 }
 html .mainwrap .downArea .middle .dataBox {
   width: 100%;
@@ -768,11 +772,11 @@ html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar {
   height: 5px;
 }
 html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
+  background: #a01142;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #c5ccd3;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock {
@@ -792,6 +796,11 @@ html .mainwrap .downArea .middle .dataBox .gameBlock {
   margin-bottom: 12px;
   overflow: hidden;
   position: relative;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
+  border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock:last-child {
   margin: 0;
@@ -804,6 +813,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background: transparent;
   color: #001e53;
   font-size: 20px;
   font-weight: bold;
@@ -819,20 +829,22 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title p {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
+  border-radius: 8px 0 0 0;
   padding: 11px 60px 11px 40px;
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .title p::before {
   content: "";
-  width: 81px;
+  width: 86px;
   height: 47px;
   position: absolute;
   top: 0;
-  right: -8px;
+  right: -84px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .arrow {
   width: 17px;
   height: 13px;
+  background-position-y: 0%;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -879,26 +891,27 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
       -ms-flex-align: center;
           align-items: center;
   background: #dfdfe2;
-  border-radius: 3px;
-  color: #a1a1a1;
+  border-radius: 50px;
+  color: #7d8697;
   font-size: 12px;
   font-weight: bold;
   margin-right: 10px;
+  pointer-events: none;
+  cursor: pointer;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live .live_ic {
   width: 10px;
   height: 10px;
   margin-right: 5px;
-  background: #a1a1a1;
+  background: #c4c9ce;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active {
-  background: #ffffff;
-  color: #616161;
-  border: 1px solid #ff2d5e;
+  background: #be1451;
+  color: #ffffff;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active .live_ic {
-  background-color: #ff2d5e;
+  background-color: #ffffff;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis .anal_ic {
   width: 12px;
@@ -906,13 +919,16 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   margin-right: 5px;
   background-position-y: 0%;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active {
-  background: #ffffff;
-  color: #1254d9;
-  border: 1px solid #1254d9;
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active {
+  background: #be1451;
+  color: #ffffff;
+  pointer-events: visible;
 }
-html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active .anal_ic {
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active .anal_ic {
   background-position-y: 100%;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active {
+  background: #4d0821;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div:last-child {
   margin-right: 0;
@@ -944,7 +960,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
   padding: 6px 10px 0px 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child p {
-  color: #a1a1a1;
+  color: #c4c9ce;
   margin-bottom: 8px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child p:last-child {
@@ -955,7 +971,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
   padding: 0 0 0 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p {
-  color: #001e53;
+  color: #27425f;
   margin-bottom: 15px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p:last-child {
@@ -970,7 +986,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .score {
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .score p {
-  color: #001e53;
+  color: #27425f;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -1007,11 +1023,11 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList:
   height: 5px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
+  background: #a01142;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #c5ccd3;
   border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li {
@@ -1045,7 +1061,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ff174e;
+  color: #dd2064;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList li .data {
@@ -1059,7 +1075,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .outter .teamList 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #001e53;
+  color: #27425f;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -1081,7 +1097,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .itemName 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ff174e;
+  color: #dd2064;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
@@ -1097,7 +1113,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .detail {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  color: #001e53;
+  color: #27425f;
   font-size: 11px;
   font-weight: bolder;
 }
@@ -1140,7 +1156,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #a1a1a1;
+  color: #c4c9ce;
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) {
@@ -1149,34 +1165,45 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) 
 html .mainwrap .downArea .middle .dataBox .gameBlock.active {
   height: 47px;
 }
+html .mainwrap .downArea .middle .dataBox .gameBlock.active .title {
+  background: #ffffff;
+}
+html .mainwrap .downArea .middle .dataBox .gameBlock.active .title p::before {
+  display: none;
+}
 html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
+  background-position-y: 100%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 html footer {
-  width: 100%;
+  width: 40%;
   height: auto;
-  background: #4a4a4a;
+  margin: 0 auto;
 }
 html footer nav ul {
-  width: 100%;
+  width: auto;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 90px 0;
+  padding: 8px;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
 }
 html footer nav ul li {
   width: 135px;
-  height: 43px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1187,23 +1214,14 @@ html footer nav ul li {
       -ms-flex-align: center;
           align-items: center;
   background: transparent;
-  border-radius: 30px 30px 0 0;
-  color: #7d8697;
+  border-radius: 50px;
+  color: #ff92b4;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-right: 3px;
+  white-space: nowrap;
   position: relative;
   cursor: pointer;
-}
-html footer nav ul li::before {
-  content: "";
-  width: 112px;
-  height: 3px;
-  background: transparent;
-  position: absolute;
-  bottom: 3px;
-  left: 12px;
 }
 html footer nav ul li i {
   width: 17px;
@@ -1212,15 +1230,11 @@ html footer nav ul li i {
   background-position-y: 0%;
 }
 html footer nav ul li:hover, html footer nav ul li:active, html footer nav ul li.active {
-  background: #4a4a4a;
-  border-radius: 30px 30px 0 0;
+  background: #be1451;
   color: #ffffff;
 }
 html footer nav ul li:hover i, html footer nav ul li:active i, html footer nav ul li.active i {
   background-position-y: 100%;
-}
-html footer nav ul li:hover::before, html footer nav ul li:active::before, html footer nav ul li.active::before {
-  background: #ff174e;
 }
 html footer .copyright {
   width: 100%;
@@ -1236,12 +1250,11 @@ html footer .copyright {
           align-items: center;
 }
 html footer .copyright p {
-  color: #ffffff;
+  color: #ff92b4;
 }
 html aside.sideLeft {
-  width: 80px;
-  height: calc(100% - 217px);
-  background: #ffffff;
+  width: 48px;
+  height: calc(100% - 305px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1249,10 +1262,20 @@ html aside.sideLeft {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 15px 0;
   position: absolute;
   top: 217px;
-  left: 0;
+  left: 22px;
   z-index: 50;
+}
+html aside.sideLeft ul {
+  width: 48px;
+  height: 100%;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
+  border-radius: 80px;
 }
 html aside.sideLeft ul li {
   width: 100%;
@@ -1267,52 +1290,83 @@ html aside.sideLeft ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   cursor: pointer;
 }
+html aside.sideLeft ul li::before {
+  content: "";
+  width: 53px;
+  height: 53px;
+  background: transparent;
+  border-radius: 50px;
+  position: absolute;
+  top: 4px;
+  left: -3.5px;
+  z-index: 1;
+}
 html aside.sideLeft ul li:hover, html aside.sideLeft ul li:active, html aside.sideLeft ul li.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff2d5f), to(#cd0434));
-  background: linear-gradient(bottom, #ff2d5f 0%, #cd0434 100%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+html aside.sideLeft ul li:hover::before, html aside.sideLeft ul li:active::before, html aside.sideLeft ul li.active::before {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 2px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0px 2px rgba(0, 0, 0, 0.3019607843);
+}
+html aside.sideLeft ul li:hover i, html aside.sideLeft ul li:active i, html aside.sideLeft ul li.active i {
+  background-position-x: 100%;
+}
+html aside.sideLeft ul li i {
+  z-index: 10;
 }
 html aside.sideLeft ul li .basketball {
   width: 25px;
   height: 25px;
+  background-position-x: 0%;
 }
 html aside.sideLeft ul li .socer {
-  width: 30px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
 }
 html aside.sideLeft ul li .baseball {
-  width: 30px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
 }
 html aside.sideLeft ul li .hockey {
-  width: 39px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
 }
 html aside.sideLeft ul li .ball {
-  width: 30px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
+  background-position-x: 0%;
 }
 html aside.sideRight {
   width: auto;
-  height: calc(100% - 217px);
+  height: calc(100% - 330px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #ffffff;
+  background: #a01142;
   padding: 10px;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3019607843);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3019607843);
   position: absolute;
-  top: 217px;
-  right: 0;
+  top: 232px;
+  right: 22px;
   z-index: 50;
   cursor: pointer;
+  background: #a01142;
+  -webkit-box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+          box-shadow: inset 0px 2px 10px rgba(39, 0, 13, 0.39);
+  border-radius: 20px;
+  border-radius: 30px;
 }
 html aside.sideRight .pic {
   width: 175px;
@@ -1321,10 +1375,10 @@ html aside.sideRight .pic {
 html aside.chatroom {
   width: 290px;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 50px;
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   right: 100px;
   z-index: 100;
 }
@@ -1341,11 +1395,11 @@ html aside.chatroom .titleArea {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
-  background: #ff174e;
+  background: #ffffff;
   cursor: pointer;
 }
 html aside.chatroom .titleArea p {
-  color: #ffffff;
+  color: #be1451;
   font-weight: bold;
 }
 html aside.chatroom .titleArea .online {
@@ -1374,6 +1428,7 @@ html aside.chatroom textarea {
 html aside.chatroom.active {
   height: 300px;
   background: #ffffff;
+  border-radius: 30px 30px 0 0;
 }
 html aside.chatroom.active .content {
   width: 100%;
@@ -1384,6 +1439,7 @@ html aside.chatroom.active .content {
 html aside.chatroom.active .content .history {
   width: 100%;
   height: 70%;
+  background: #f2f2f6;
   padding: 10px;
   border-bottom: 1px solid #dfdfdf;
   overflow: hidden;
@@ -1398,15 +1454,15 @@ html aside.chatroom.active .content .history .text::-webkit-scrollbar {
   height: 5px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
+  background: #a01142;
   border-radius: 10px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #c5ccd3;
   border-radius: 10px;
 }
 html aside.chatroom.active .content .history .text::-webkit-scrollbar-thumb {
-  background: #ff174e;
+  background: #a01142;
 }
 html aside.chatroom.active .content .history .text li {
   width: auto;
@@ -1419,7 +1475,7 @@ html aside.chatroom.active .content .history .text li p {
   max-width: 250px;
   height: auto;
   display: inline-block;
-  background: #ff174e;
+  background: #dd2064;
   border-radius: 15px;
   word-break: break-all;
   padding: 10px;

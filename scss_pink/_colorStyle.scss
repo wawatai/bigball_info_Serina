@@ -1,0 +1,79 @@
+//主色調
+$main_color: #be1451;
+$sub_color: #ffffff;
+$deco_color: #a01142;
+
+//字色
+$main_font: #27425f;
+$sub_font: #7d8697;
+$light_font: #ffffff;
+$lightgray_font: #c4c9ce;
+$score: #dd2064;
+
+//border
+$header_border: #ecedef;
+$data_border: #dfdfdf;
+$switch_border: $score;
+
+//陰影
+$shadow01: #0000004d;
+$shadow02: #00000021;
+
+//區塊背景樣式
+@mixin blockBG {
+    background: #a01142;
+    box-shadow: inset 0px 2px 10px rgb(39,0,13,39%);
+    border-radius: 20px;
+}
+
+//scrollbar
+$scrollBar_thumb: $deco_color;
+$scrollBar_track: #c5ccd3;
+
+@mixin scrollBar {
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scrollBar_thumb;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $scrollBar_track;
+        border-radius: 10px;
+    }
+}
+
+//header
+$header_font: $light_font;
+$header_memb_BG: #fcd9e3;
+
+//左側按鈕列
+$side_bg: $sub_color;
+$side_HOV_bg: $sub_color;
+
+//middle
+$mid_bg: #d8d8db;
+$switch_Btn: $main_color;
+$switch_text: #ff92b4;
+
+//gameBlock
+$gameBlock_bg: #f2f2f6;
+$gametitle_font: #001e53;
+$itemName_text: $score;
+$gameContent_text: #282828;
+$state_BG: #dfdfe2;
+$state_active: $main_color;
+$state_hover: #4d0821;
+$state_LIVE_text: #616161;
+
+
+//footer
+$footer_BG: #4a4a4a;
+$footer_text: $switch_text;
+$copyright: $switch_text;
+

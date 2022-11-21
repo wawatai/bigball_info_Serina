@@ -1,0 +1,17 @@
+html {
+    width: 100%;
+    height: 100%;
+
+    body {
+        width: auto;
+        height: 100%;
+        background: $main_color;
+        padding: 0 22px;
+        position: relative;
+    }
+
+    @import "./_header";
+    @import "./_mainWrap";
+    @import "./_footer";
+    @import "./_aside";
+}
