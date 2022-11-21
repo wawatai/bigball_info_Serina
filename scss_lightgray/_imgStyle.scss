@@ -71,6 +71,10 @@ header .user .ac_ic {
 }
 
 //footer
+footer .copyright {
+    background: url(../img_lightgray/footer_bg.png) no-repeat center;  
+    background-size: 100%;
+}
 footer i.help_ic {
     background: url(../img_lightgray/icon/fnav01.png) no-repeat;
     background-size: 100%;
@@ -89,15 +93,6 @@ footer i.policy_ic {
 }
 footer i.about_ic {
     background: url(../img_lightgray/icon/fnav05.png) no-repeat;
-    background-size: 100%;
-}
-footer nav ul li:hover::before,
-footer nav ul li:active::before,
-footer nav ul li.active::before,
-footer nav ul li:hover::after ,
-footer nav ul li:active::after ,
-footer nav ul li.active::after  {
-    background: url(../img_lightgray/switchBtn_active.png) no-repeat center;
     background-size: 100%;
 }
 

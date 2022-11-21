@@ -12,7 +12,7 @@ $score: #ff4370;
 
 //border
 $header_border: #ecedef;
-$data_border: #e5e9ec;
+$data_border: #dfdfdf;
 $tag_border: #5785c7;
 
 //陰影
@@ -60,10 +60,14 @@ $mid_bg: #d8d8db;
 $switch_Btn: linear-gradient(bottom, #edf1f6 0%, #ffffff 68%);
 
 //gameBlock
-$gametitle_font: #7b829f;
-$state_BG: #efefef;
-$state_LIVE: #ff8656;
-$state_Analysis: $main_color;
+$gameBlock_bg: #f2f2f6;
+$gametitle_font: #001e53;
+$gameContent_text: #282828;
+$state_BG: #dfdfe2;
+$state_active: $sub_color;
+$state_LIVE_text: #616161;
+$state_LIVE_border: #ff2d5e;
+$state_Analysis_border: #1254d9;
 
 
 //footer

@@ -74,6 +74,11 @@ header .user .ac_ic {
   background-size: contain;
 }
 
+footer .copyright {
+  background: url(../img_lightgray/footer_bg.png) no-repeat center;
+  background-size: 100%;
+}
+
 footer i.help_ic {
   background: url(../img_lightgray/icon/fnav01.png) no-repeat;
   background-size: 100%;
@@ -96,16 +101,6 @@ footer i.policy_ic {
 
 footer i.about_ic {
   background: url(../img_lightgray/icon/fnav05.png) no-repeat;
-  background-size: 100%;
-}
-
-footer nav ul li:hover::before,
-footer nav ul li:active::before,
-footer nav ul li.active::before,
-footer nav ul li:hover::after,
-footer nav ul li:active::after,
-footer nav ul li.active::after {
-  background: url(../img_lightgray/switchBtn_active.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -688,7 +683,7 @@ html .mainwrap .downArea .middle .funtionArea {
           justify-content: space-between;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 12px 7px 12px 12px;
+  padding: 12px 7px 7px 12px;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn {
   width: 301px;
@@ -792,8 +787,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock {
           flex-direction: column;
   background: #ffffff;
   border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1294117647);
           box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1294117647);
   margin-bottom: 12px;
@@ -811,7 +804,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .title {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  color: #7b829f;
+  color: #001e53;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -851,9 +844,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content {
   display: flex;
   width: 100%;
   height: auto;
+  background: #f2f2f6;
+  color: #282828;
   padding: 0 0 15px 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item {
@@ -885,8 +878,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #efefef;
-  border-radius: 10px;
+  background: #dfdfe2;
+  border-radius: 3px;
   color: #a1a1a1;
   font-size: 12px;
   font-weight: bold;
@@ -896,14 +889,16 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   width: 10px;
   height: 10px;
   margin-right: 5px;
-  background-color: #a1a1a1;
+  background: #a1a1a1;
+  border-radius: 10px;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active {
-  background: #ff8656;
-  color: #ffffff;
+  background: #ffffff;
+  color: #616161;
+  border: 1px solid #ff2d5e;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active .live_ic {
-  background-color: #ffffff;
+  background-color: #ff2d5e;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis .anal_ic {
   width: 12px;
@@ -912,8 +907,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   background-position-y: 0%;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active {
-  background: #4a4a4a;
-  color: #ffffff;
+  background: #ffffff;
+  color: #1254d9;
+  border: 1px solid #1254d9;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active .anal_ic {
   background-position-y: 100%;
@@ -946,8 +942,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child {
   width: 25%;
   padding: 6px 10px 0px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:first-child p {
   color: #a1a1a1;
@@ -959,8 +953,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateT
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child {
   width: 75%;
   padding: 0 0 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .dateTeam div:last-child p {
   color: #001e53;
@@ -1077,8 +1069,6 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .status {
   height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .status .itemName {
   height: 50px;
@@ -1154,7 +1144,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .none {
   font-weight: bold;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content:not(:first-child) {
-  border-bottom: 1px solid #e5e9ec;
+  border-bottom: 1px solid #dfdfdf;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock.active {
   height: 47px;
@@ -1176,13 +1166,13 @@ html footer nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 0 0;
+  padding: 12px 90px 0;
 }
 html footer nav ul li {
   width: 135px;
@@ -1206,10 +1196,19 @@ html footer nav ul li {
   position: relative;
   cursor: pointer;
 }
+html footer nav ul li::before {
+  content: "";
+  width: 112px;
+  height: 3px;
+  background: transparent;
+  position: absolute;
+  bottom: 3px;
+  left: 12px;
+}
 html footer nav ul li i {
   width: 17px;
   height: 17px;
-  margin-right: 5px;
+  margin-right: 8px;
   background-position-y: 0%;
 }
 html footer nav ul li:hover, html footer nav ul li:active, html footer nav ul li.active {
@@ -1221,22 +1220,7 @@ html footer nav ul li:hover i, html footer nav ul li:active i, html footer nav u
   background-position-y: 100%;
 }
 html footer nav ul li:hover::before, html footer nav ul li:active::before, html footer nav ul li.active::before {
-  content: "";
-  width: 12px;
-  height: 11px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  position: absolute;
-  bottom: 0;
-  left: -11px;
-}
-html footer nav ul li:hover::after, html footer nav ul li:active::after, html footer nav ul li.active::after {
-  content: "";
-  width: 12px;
-  height: 11px;
-  position: absolute;
-  bottom: 0;
-  right: -11.49px;
+  background: #ff174e;
 }
 html footer .copyright {
   width: 100%;
@@ -1250,7 +1234,6 @@ html footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #4a4a4a;
 }
 html footer .copyright p {
   color: #ffffff;
@@ -1306,7 +1289,7 @@ html aside.sideLeft ul li .baseball {
 }
 html aside.sideLeft ul li .hockey {
   width: 39px;
-  height: 28px;
+  height: 30px;
 }
 html aside.sideLeft ul li .ball {
   width: 30px;
@@ -1395,14 +1378,14 @@ html aside.chatroom.active {
 html aside.chatroom.active .content {
   width: 100%;
   height: 100%;
-  border-left: 1px solid #e5e9ec;
-  border-right: 1px solid #e5e9ec;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
 }
 html aside.chatroom.active .content .history {
   width: 100%;
   height: 70%;
   padding: 10px;
-  border-bottom: 1px solid #e5e9ec;
+  border-bottom: 1px solid #dfdfdf;
   overflow: hidden;
 }
 html aside.chatroom.active .content .history .text {
