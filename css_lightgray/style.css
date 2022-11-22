@@ -1,111 +1,111 @@
 @charset "UTF-8";
 header {
-  background: url(../img_pink/header_bg.png) no-repeat top center;
+  background: url(../img_lightgray/header_bg.png) no-repeat top center;
 }
 
 header .smallNav i {
-  background: url(../img_pink/icon/navList.png) no-repeat;
+  background: url(../img_lightgray/icon/navList.png) no-repeat;
   background-size: 300%;
 }
 
 header .moneyDate i,
 header .other .lang {
-  background: url(../img_pink/icon/moneyData.png) no-repeat center;
+  background: url(../img_lightgray/icon/moneyData.png) no-repeat center;
   background-size: 100%;
 }
 
 header .user .ac_ic {
-  background: url(../img_pink/icon/user.png) no-repeat center;
+  background: url(../img_lightgray/icon/user.png) no-repeat center;
   background-size: 100%;
 }
 
 .topArea {
-  background: url(../img_pink/header_bg.png) no-repeat bottom center;
+  background: url(../img_lightgray/header_bg.png) no-repeat bottom center;
 }
 
 .sideLeft li .basketball {
-  background: url(../img_pink/icon/sideLeft01_btn.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft01_btn.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideLeft li .socer {
-  background: url(../img_pink/icon/sideLeft02_btn.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft02_btn.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideLeft li .baseball {
-  background: url(../img_pink/icon/sideLeft03_btn.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft03_btn.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideLeft li .hockey {
-  background: url(../img_pink/icon/sideLeft04_btn.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft04_btn.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideLeft li .ball {
-  background: url(../img_pink/icon/sideLeft05_btn.png) no-repeat center;
+  background: url(../img_lightgray/icon/sideLeft05_btn.png) no-repeat center;
   background-size: 100%;
 }
 
 .funtionArea .collapse_ic {
-  background: url(../img_pink/icon/collapase_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/collapase_ic.png) no-repeat center;
   background-size: 100%;
 }
 
 .gameBlock .state .anal_ic {
-  background: url(../img_pink/icon/anal_ic.png) no-repeat;
+  background: url(../img_lightgray/icon/anal_ic.png) no-repeat;
   background-size: 100%;
 }
 
 .gameBlock .arrow {
-  background: url(../img_pink/icon/arrow_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/arrow_ic.png) no-repeat center;
   background-size: 100%;
 }
 
 .gameBlock .status .detail .left i.red,
 .gameBlock .status .detail .left i.yellow {
-  background: url(../img_pink/icon/point_state.png) no-repeat center;
+  background: url(../img_lightgray/icon/point_state.png) no-repeat center;
   background-size: 100%;
 }
 
 .sideRight .pic {
-  background: url(../img_pink/rightside_pic.png) no-repeat center;
+  background: url(../img_lightgray/rightside_pic.png) no-repeat center;
   background-size: contain;
 }
 
 footer .copyright {
-  background: url(../img_pink/footer_bg.png) no-repeat center;
+  background: url(../img_lightgray/footer_bg.png) no-repeat center;
   background-size: 100%;
 }
 
 footer i.help_ic {
-  background: url(../img_pink/icon/fnav01.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav01.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.feedBack_ic {
-  background: url(../img_pink/icon/fnav02.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav02.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.promote_ic {
-  background: url(../img_pink/icon/fnav03.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav03.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.policy_ic {
-  background: url(../img_pink/icon/fnav04.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav04.png) no-repeat;
   background-size: 100%;
 }
 
 footer i.about_ic {
-  background: url(../img_pink/icon/fnav05.png) no-repeat;
+  background: url(../img_lightgray/icon/fnav05.png) no-repeat;
   background-size: 100%;
 }
 
 aside.chatroom .titleArea .member_ic {
-  background: url(../img_pink/icon/online_ic.png) no-repeat center;
+  background: url(../img_lightgray/icon/online_ic.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -884,6 +884,8 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   font-size: 12px;
   font-weight: bold;
   margin-right: 10px;
+  pointer-events: none;
+  cursor: pointer;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live .live_ic {
   width: 10px;
@@ -896,6 +898,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   background: #ffffff;
   color: #616161;
   border: 1px solid #ff2d5e;
+  pointer-events: visible;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active .live_ic {
   background-color: #ff2d5e;
@@ -910,6 +913,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
   background: #ffffff;
   color: #1254d9;
   border: 1px solid #1254d9;
+  pointer-events: visible;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:hover .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis:active .anal_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.analysis.active .anal_ic {
   background-position-y: 100%;
@@ -1172,7 +1176,7 @@ html footer nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 90px 0;
+  padding: 0 90px;
 }
 html footer nav ul li {
   width: 135px;

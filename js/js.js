@@ -20,6 +20,16 @@ $(function(){
         $("header .langDrop").toggleClass("display");
     })
 
+    //sideLeft
+    $("aside ul li").hover(function(){
+        $(this).siblings()
+        .removeClass("active");  
+    })
+    $("aside ul li").click(function(){
+        $(this)
+        .addClass("active");
+    })
+
     //全部收起
     $(".funtionArea .collapse").click(function(){
         if ($(".middle .dataBox .gameBlock").hasClass("active"))
@@ -40,6 +50,7 @@ $(function(){
     //開啟聊天室
     $(".chatroom .titleArea").click(function(){
         $(".chatroom").toggleClass("active");
+        $(".chatroom .titleArea::before").css("display","none");
     })
 
     //傳送訊息

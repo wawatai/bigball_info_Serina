@@ -201,7 +201,6 @@ html header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 20px;
   position: relative;
 }
 html header .smallNav {
@@ -909,6 +908,7 @@ html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active {
   background: #be1451;
   color: #ffffff;
+  pointer-events: visible;
 }
 html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:hover .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live:active .live_ic, html .mainwrap .downArea .middle .dataBox .gameBlock .content .fixed_item .state div.live.active .live_ic {
   background-color: #ffffff;

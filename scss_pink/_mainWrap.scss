@@ -303,6 +303,7 @@
                                         &:hover,&:active,&.active {
                                             background: $state_active;
                                             color: $light_font;
+                                            pointer-events: visible;
 
                                             .live_ic {
                                                 background-color: $sub_color;

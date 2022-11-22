@@ -24,12 +24,56 @@ aside {
                 align-items: center;
                 margin-bottom: 5px;
                 cursor: pointer;
+
+                &:first-child {
+                    &:hover,&:active,&.active {
+                        background: $side_HOV_bg;
+                        border-radius: 80px;
+                        transition: 0.2s;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            width: 50px;
+                            height: 53px;
+                            background: $sub_color;
+                            border-radius: 50px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+                            animation: fade_down 0.2s ease-in-out forwards;
+                        }
+                    }
+                }
     
-                &:hover,&:active,&.active {
+                &:active,&.active {
                     background: $side_HOV_bg;
                     border-radius: 80px;
                     transition: 0.2s;
-    
+                   
+                    i {
+                        background-position-x: 100%;
+                        animation: ball 0.5s linear infinite;
+                    }
+                }
+
+                &:hover {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 50px;
+                        height: 53px;
+                        background: $sub_color;
+                        border-radius: 50px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        z-index: -5;
+                        animation: fade 0.2s ease-in-out;
+                    }
+
                     i {
                         background-position-x: 100%;
                     }
@@ -103,6 +147,7 @@ aside {
             align-items: center;
             padding: 0 20px;
             background: $deco_color;
+            position: relative;
             cursor: pointer;
 
             p {
@@ -122,6 +167,23 @@ aside {
                     height: 19px;
                     margin-right: 5px;
                 }
+            }
+
+            &::before {
+                content: "12";
+                width: auto;
+                height: 20px;
+                display: flex;
+                background: $noti;
+                color: $sub_color;
+                font-size: 13px;
+                font-weight: bolder;
+                border-radius: 12px;
+                padding: 4px 9px 0;
+                position: absolute;
+                top: 9px;
+                left: 80px;
+                animation: invisible 2s ease-in-out, wiggle 2.5s 5s infinite;
             }
         }
         .content {
@@ -198,5 +260,93 @@ aside {
                 }
             }
         }
+    }
+}
+
+@keyframes fade {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}
+@keyframes fade_down {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}
+@keyframes ball {
+    0% {
+        transform: rotate(90deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes invisible {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+} 
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    35% {
+        transform: rotate(15deg);
+    }
+    45% {
+        transform: rotate(-20deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

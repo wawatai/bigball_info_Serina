@@ -311,6 +311,8 @@
                                     font-size: 12px;
                                     font-weight: bold;
                                     margin-right: 10px;
+                                    pointer-events: none;
+                                    cursor: pointer;
 
                                     &.live {
                                         .live_ic {
@@ -325,6 +327,7 @@
                                             background: $state_active;
                                             color: $state_LIVE_text;
                                             border: 1px solid $state_LIVE_border;
+                                            pointer-events: visible;
 
                                             .live_ic {
                                                 background-color: $state_LIVE_border;
@@ -344,6 +347,7 @@
                                             background: $state_active;
                                             color: $state_Analysis_border;
                                             border: 1px solid $state_Analysis_border;
+                                            pointer-events: visible;
 
                                             .anal_ic {
                                                 background-position-y: 100%;
