@@ -21,7 +21,15 @@ aside {
                 align-items: center;
                 cursor: pointer;
     
-                &:hover,&:active,&.active {
+                &:hover {
+                    background: $side_HOV_bg;
+                    transition: 0.9s;
+
+                    i {
+                        transform: scale(1.2);
+                    }
+                }
+                &:active,&.active {
                     background: $side_HOV_bg;
                     transition: 0.2s;
                 }
@@ -109,6 +117,26 @@ aside {
                     margin-right: 5px;
                 }
             }
+
+            .notfition {
+                display: none;
+                width: auto;
+                height: auto;
+                background: $noti;
+                color: $sub_color;
+                font-size: 13px;
+                font-weight: bolder;
+                border-radius: 12px;
+                padding: 5px 7px;
+                position: absolute;
+                top: 9px;
+                left: 80px;
+                animation: invisible 2s ease-in-out, wiggle 2.5s 5s infinite;
+            
+                &.display {
+                    display: flex;
+                }
+            }
         }
         .content {
             height: 0;
@@ -184,5 +212,49 @@ aside {
                 }
             }
         }
+    }
+}
+@keyframes invisible {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+} 
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    35% {
+        transform: rotate(15deg);
+    }
+    45% {
+        transform: rotate(-20deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

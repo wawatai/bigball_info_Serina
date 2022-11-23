@@ -22,9 +22,9 @@
             height: auto;
             padding: 10px 0;
             display: flex;
-            overflow-x: overlay;
+            // overflow-x: overlay;
 
-            @include scrollBar;
+            // @include scrollBar;
 
             .tag {
                 width: 350px;
@@ -90,24 +90,29 @@
                     }
                 }
     
-                &:nth-of-type(1){
+                &.a {
                     &::before {
                         background: $tag_01;
                     }
                 }
-                &:nth-of-type(2){
+                &.b {
                     &::before {
                         background: $tag_02;
                     }
                 }
-                &:nth-of-type(3){
+                &.c {
                     &::before {
                         background: $tag_03;
                     }
                 }
-                &:nth-of-type(4){
+                &.d {
                     &::before {
                         background: $tag_04;
+                    }
+                }
+                &.e {
+                    &::before {
+                        background: $tag_05;
                     }
                 }
     
@@ -167,23 +172,60 @@
                         border-radius: 5px;
                         justify-content: center;
                         align-items: center;
-                        color: $main_font;
-                        font-weight: bold;
+                        overflow: hidden;
                         
-                        &:hover,&:active,&.active {
-                            background: $side_HOV_bg;
+                        &:hover,&:active {
+                            background: $deco_color;
                             border-radius: 5px;
-                            color: $light_font;
                             position: relative;
 
                             &::before {
-                                content: "";
-                                width: 12px;
-                                height: 11px;
-                                position: absolute;
-                                bottom: 0;
-                                right: -12px;
+                                animation: center 0.45s linear 0s;
                             }
+
+                            p {
+                                color: $light_font;
+                                transition-delay: 0.3s;
+                            }
+                        }
+
+                        &.active {
+                            background: $deco_color;
+                            border-radius: 5px;
+                            position: relative;
+
+                            p {
+                                color: $light_font;
+                            }
+                        }
+
+                        &::before {
+                            content: "";
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 50%;
+                            background: #ffffff;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%) scale(0);
+                        }
+                        @keyframes center {
+                            0% {
+                                transform: translate(-50%,-50%) scale(1);
+                            }
+
+                            100% {
+                                transform: translate(-50%,-50%) scale(0);
+                            }
+                        }
+
+                        p {
+                            position: relative;
+                            color: $main_font;
+                            font-weight: bold;
+                            transition: 0.3s all;
+                            z-index: 1;
                         }
 
                         &:nth-of-type(2){
@@ -316,8 +358,8 @@
 
                                     &.live {
                                         .live_ic {
-                                            width: 10px;
-                                            height: 10px;
+                                            width: 8px;
+                                            height: 8px;
                                             margin-right: 5px;
                                             background: $lightgray_font;
                                             border-radius: 10px;
@@ -331,6 +373,32 @@
 
                                             .live_ic {
                                                 background-color: $state_LIVE_border;
+                                                position: relative;
+
+                                                &::before {
+                                                    content: "";
+                                                    width: 13px;
+                                                    height: 13px;
+                                                    background: $state_LIVE_border;
+                                                    border-radius: 50%;
+                                                    position: absolute;
+                                                    top: -2.5px;
+                                                    left: -2.5px;
+                                                    animation: first 3s ease-in-out infinite;
+                                                }
+    
+                                                &::after {
+                                                    content: "";
+                                                    width: 11px;
+                                                    height: 11px;
+                                                    background: $state_LIVE_border;
+                                                    border-radius: 50%;
+                                                    opacity: 0.5;
+                                                    position: absolute;
+                                                    top: -1.5px;
+                                                    left: -1.5px;
+                                                    animation: first 2s 2.5s ease-in infinite;
+                                                }
                                             }
                                         }
                                     }
@@ -570,5 +638,15 @@
                 }
             }
         }
+    }
+}
+@keyframes first {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1.3);
     }
 }

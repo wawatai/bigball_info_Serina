@@ -41,7 +41,8 @@ footer {
                     border-radius: 30px 30px 0 0;
                     color: $light_font;
 
-                    i {
+                    i { 
+                        transition: 0.8s;
                         background-position-y: 100%;
                     }
 

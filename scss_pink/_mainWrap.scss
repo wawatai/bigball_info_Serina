@@ -23,9 +23,9 @@
             height: auto;
             padding: 10px 0;
             display: flex;
-            overflow-x: overlay;
+            // overflow-x: overlay;
 
-            @include scrollBar;
+            // @include scrollBar;
 
             .tag {
                 width: 350px;
@@ -140,25 +140,51 @@
                         font-weight: bold;
                         margin: auto;
                         
-                        &:hover,&:active,&.active {
-                            background: $switch_Btn;;
-                            border-radius: 50px;
-                            border: 1px solid $switch_border;
+                        &:hover {
                             color: $light_font;
                             position: relative;
 
                             &::before {
                                 content: "";
-                                width: 12px;
-                                height: 11px;
+                                width: 80px;
+                                height: 100%;
+                                background: $switch_Btn;
+                                border-radius: 50px;
+                                border: 1px solid $switch_border;
+                                color: $light_font;
+                                animation: left 0.3s ease-out;
                                 position: absolute;
-                                bottom: 0;
-                                right: -12px;
+                                top: -1px;
+                                left: 1;
+                                z-index: 1;
+                            }
+                        }
+                        &:active,&.active {
+                            color: $light_font;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 80px;
+                                height: 100%;
+                                background: $switch_Btn;
+                                border-radius: 50px;
+                                border: 1px solid $switch_border;
+                                color: $light_font;
+                                position: absolute;
+                                top: -1px;
+                                left: 1;
+                                z-index: 1;
                             }
                         }
 
                         &:nth-of-type(2){
                             margin: auto 3px;
+                        }
+
+                        p {
+                            position: relative;
+                            z-index: 10;
                         }
                     }
                 }
@@ -560,5 +586,15 @@
                 }
             }
         }
+    }
+}
+@keyframes left {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
     }
 }

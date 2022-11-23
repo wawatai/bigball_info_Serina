@@ -50,7 +50,7 @@ $(function(){
     //開啟聊天室
     $(".chatroom .titleArea").click(function(){
         $(".chatroom").toggleClass("active");
-        $(".chatroom .titleArea::before").css("display","none");
+        $(".chatroom .titleArea .notfition").toggleClass("display");
     })
 
     //傳送訊息
@@ -62,6 +62,44 @@ $(function(){
             $(".chatroom .text").append("<li><p>"+ text +"</p></li>");
 
             $(this).val(" ");
-        }
+
+           
+            var h = $(".chatroom .content .history .text").prop("scrollHeight");
+            $(".chatroom .content .history .text")
+            .animate({scrollTop: h}, 0);
+        }  
     })
 })
+
+$(function(){
+    //賽事場次
+    var swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        slidesPerView: 5,
+        spaceBetween: 30,
+        breakpoints: {
+            1600: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+            1260: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1000: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        },
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true,
+        // },
+    });
+})
+

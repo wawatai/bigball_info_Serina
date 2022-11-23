@@ -580,19 +580,6 @@ html .mainwrap .topArea .outterBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: overlay;
-}
-html .mainwrap .topArea .outterBox::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-html .mainwrap .topArea .outterBox::-webkit-scrollbar-thumb {
-  background: #2b6de7;
-  border-radius: 10px;
-}
-html .mainwrap .topArea .outterBox::-webkit-scrollbar-track {
-  background: #efefef;
-  border-radius: 10px;
 }
 html .mainwrap .topArea .outterBox .tag {
   width: 350px;
@@ -658,17 +645,20 @@ html .mainwrap .topArea .outterBox .tag .content .detail {
   margin-top: 15px;
   text-align: center;
 }
-html .mainwrap .topArea .outterBox .tag:nth-of-type(1)::before {
+html .mainwrap .topArea .outterBox .tag.a::before {
   background: #ff8451;
 }
-html .mainwrap .topArea .outterBox .tag:nth-of-type(2)::before {
+html .mainwrap .topArea .outterBox .tag.b::before {
   background: #2b6de7;
 }
-html .mainwrap .topArea .outterBox .tag:nth-of-type(3)::before {
+html .mainwrap .topArea .outterBox .tag.c::before {
   background: #10ba3f;
 }
-html .mainwrap .topArea .outterBox .tag:nth-of-type(4)::before {
+html .mainwrap .topArea .outterBox .tag.d::before {
   background: #de5974;
+}
+html .mainwrap .topArea .outterBox .tag.e::before {
+  background: #ff8451;
 }
 html .mainwrap .topArea .outterBox .tag::before {
   content: "";
@@ -745,8 +735,8 @@ html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover {
   border-radius: 10px 28px 0 10px;
   color: #ffffff;
   position: relative;
-  -webkit-animation: bounce 0.6s 0.8s ease-in-out;
-          animation: bounce 0.6s 0.8s ease-in-out;
+  -webkit-animation: bounce 0.3s 0.2s ease-in-out;
+          animation: bounce 0.3s 0.2s ease-in-out;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover::before {
   content: "";
@@ -754,9 +744,7 @@ html .mainwrap .downArea .middle .funtionArea .switchBtn div:hover::before {
   height: 11px;
   position: absolute;
   bottom: 0;
-  right: -12px;
-  -webkit-animation: bounce 0.6s 0.8s ease-in-out;
-          animation: bounce 0.6s 0.8s ease-in-out;
+  right: -11px;
 }
 html .mainwrap .downArea .middle .funtionArea .switchBtn div:active, html .mainwrap .downArea .middle .funtionArea .switchBtn div.active {
   background: #2b6de7;
@@ -1276,9 +1264,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
     -webkit-transform: skewX(0);
             transform: skewX(0);
   }
-  85% {
-    -webkit-transform: skewX(45deg);
-            transform: skewX(45deg);
+  50% {
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
   }
   100% {
     -webkit-transform: skewX(0);
@@ -1290,9 +1278,9 @@ html .mainwrap .downArea .middle .dataBox .gameBlock.active .arrow {
     -webkit-transform: skewX(0);
             transform: skewX(0);
   }
-  85% {
-    -webkit-transform: skewX(45deg);
-            transform: skewX(45deg);
+  50% {
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
   }
   100% {
     -webkit-transform: skewX(0);
@@ -1352,6 +1340,8 @@ html footer nav ul li:hover, html footer nav ul li:active, html footer nav ul li
   color: #ffffff;
 }
 html footer nav ul li:hover i, html footer nav ul li:active i, html footer nav ul li.active i {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   background-position-y: 100%;
 }
 html footer nav ul li:hover::before, html footer nav ul li:active::before, html footer nav ul li.active::before {
@@ -1571,24 +1561,26 @@ html aside.chatroom .titleArea .online .member_ic {
   height: 19px;
   margin-right: 5px;
 }
-html aside.chatroom .titleArea::before {
-  content: "12";
+html aside.chatroom .titleArea .notfition {
+  display: none;
   width: auto;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #e60017;
+  height: auto;
+  background: #2b6de7;
   color: #ffffff;
   font-size: 13px;
   font-weight: bolder;
   border-radius: 12px;
-  padding: 4px 9px 0;
+  padding: 5px 7px;
   position: absolute;
   top: 9px;
   left: 80px;
   -webkit-animation: invisible 2s ease-in-out, wiggle 2.5s 5s infinite;
           animation: invisible 2s ease-in-out, wiggle 2.5s 5s infinite;
+}
+html aside.chatroom .titleArea .notfition.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 html aside.chatroom .content {
   height: 0;
