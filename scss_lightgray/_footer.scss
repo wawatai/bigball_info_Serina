@@ -55,6 +55,10 @@ footer {
                         background-position-y: 100%;
                     }
 
+                    p {
+                        box-shadow: 0px 0px 15px $shadow02;
+                    }
+
                     &::before {
                         animation: line 1s ease-in-out;
                         background: $deco_color;

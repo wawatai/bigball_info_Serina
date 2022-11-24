@@ -1347,6 +1347,12 @@ html aside.sideLeft ul li:hover::before, html aside.sideLeft ul li:active::befor
 }
 html aside.sideLeft ul li:hover i, html aside.sideLeft ul li:active i, html aside.sideLeft ul li.active i {
   background-position-x: 100%;
+  -webkit-transition: 1s -webkit-transform;
+  transition: 1s -webkit-transform;
+  transition: 1s transform;
+  transition: 1s transform, 1s -webkit-transform;
+  -webkit-transform: rotateY(-360deg);
+          transform: rotateY(-360deg);
 }
 html aside.sideLeft ul li i {
   z-index: 10;

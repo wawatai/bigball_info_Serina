@@ -49,6 +49,8 @@ aside {
 
                     i {
                         background-position-x : 100%;
+                        transition: 1s transform;
+                        transform: rotateY(-360deg);
                     }
 
                     transition: 0.2s;
